@@ -168,6 +168,20 @@
   .pub .pmeta b{color:var(--accent);}
   .pub .plink{display:inline-block; background:var(--navy); color:#fff; padding:12px 24px; border-radius:11px; font-weight:600; font-size:14px; transition:.2s;}
   .pub .plink:hover{background:var(--navy2); transform:translateY(-2px);}
+  /* فرم تماس */
+  .cform{max-width:520px; margin:6px auto 30px; text-align:right;}
+  .cf-row{display:flex; gap:12px; margin-bottom:12px;}
+  .cform input, .cform textarea{width:100%; padding:13px 16px; border-radius:11px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.08); color:#fff; font-family:inherit; font-size:15px; outline:none; transition:.2s;}
+  .cform input::placeholder, .cform textarea::placeholder{color:#9fb0c9;}
+  .cform input:focus, .cform textarea:focus{border-color:var(--accent); background:rgba(255,255,255,0.13);}
+  .cform textarea{resize:vertical; margin-bottom:12px;}
+  .cf-btn{width:100%; padding:14px; border:none; border-radius:11px; background:var(--accent); color:var(--navy); font-weight:700; font-size:15px; cursor:pointer; transition:.2s; font-family:inherit;}
+  .cf-btn:hover{background:var(--accent2); transform:translateY(-2px);}
+  .cf-btn:disabled{opacity:.6; cursor:default; transform:none;}
+  .cf-status{margin-top:12px; font-size:14px; min-height:20px;}
+  .cf-status.ok{color:#7ee0a8;}
+  .cf-status.err{color:#ff9b8a;}
+  @media(max-width:560px){ .cf-row{flex-direction:column;} }
 </style>
 </head>
 <body>
@@ -306,6 +320,18 @@
 <section class="block contact" id="contact"><div class="wrap">
   <h2 class="reveal">بیایید با هم کار کنیم</h2>
   <p class="reveal">برای همکاری در پروژه‌های طراحی، ساخت یا اتوماسیون، خوشحال می‌شم در ارتباط باشیم.</p>
+
+  <form class="cform reveal" id="contactForm" action="https://formspree.io/f/mrevzvg" method="POST">
+    <div class="cf-row">
+      <input type="text" name="name" placeholder="نام شما" required>
+      <input type="email" name="email" placeholder="ایمیل شما" required>
+    </div>
+    <textarea name="message" rows="4" placeholder="پیام شما…" required></textarea>
+    <button type="submit" class="cf-btn">ارسال پیام</button>
+    <div class="cf-status" id="cfStatus"></div>
+  </form>
+
+  <p class="reveal" style="color:#9fb0c9; font-size:14px; margin-bottom:6px;">یا از این راه‌ها در تماس باش:</p>
   <div class="c-links reveal">
     <a href="mailto:Nasiri2752@Gmail.com">✉️ Nasiri2752@Gmail.com</a>
     <a href="tel:+989368047725">📞 ۰۹۳۶۸۰۴۷۷۲۵</a>
@@ -354,6 +380,40 @@
     es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
   },{threshold:0.12});
   document.querySelectorAll(".reveal").forEach((el,i)=>{ el.style.transitionDelay=(i%3*0.08)+"s"; io.observe(el); });
+
+  // ارسال فرم تماس از طریق Formspree (بدون رفرش صفحه)
+  const cform = document.getElementById("contactForm");
+  if(cform){
+    cform.addEventListener("submit", async e=>{
+      e.preventDefault();
+      const status = document.getElementById("cfStatus");
+      const btn = cform.querySelector(".cf-btn");
+      const old = btn.textContent;
+      status.textContent = ""; status.className = "cf-status";
+      btn.disabled = true; btn.textContent = "در حال ارسال…";
+      try{
+        const res = await fetch(cform.action, {
+          method: "POST",
+          body: new FormData(cform),
+          headers: { "Accept": "application/json" }
+        });
+        if(res.ok){
+          cform.reset();
+          status.textContent = "پیامت با موفقیت ارسال شد. به‌زودی پاسخ می‌دم!";
+          status.className = "cf-status ok";
+        } else {
+          status.textContent = "مشکلی پیش اومد. لطفاً دوباره تلاش کن یا از ایمیل استفاده کن.";
+          status.className = "cf-status err";
+        }
+      }catch(err){
+        status.textContent = "ارسال ناموفق بود. اتصال اینترنت یا آدرس فرم را بررسی کن.";
+        status.className = "cf-status err";
+      }finally{
+        btn.disabled = false; btn.textContent = old;
+      }
+    });
+  }
+
 </script>
 <div class="pmodal" id="pmodal" onclick="if(event.target===this)closeProj()">
   <div class="pcard">
