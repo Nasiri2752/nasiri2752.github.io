@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حسن نصیری خونساری — مهندس مکانیک و مکاترونیک</title>
-<!-- nasiri site v2.5 -->
+<!-- nasiri site v2.6 -->
 <meta name="description" content="حسن نصیری خونساری، مهندس طراحی مکانیک و مکاترونیک؛ ربات‌های صنعتی، ماشین‌آلات سفارشی و اتوماسیون. کارشناسی ارشد دانشگاه صنعتی شریف و برگزیده‌ی جشنواره‌ی البرز.">
 <link rel="canonical" href="https://hassannasiri.ir/">
 <meta property="og:type" content="profile">
@@ -254,6 +254,19 @@ p{text-align:justify;}
 #pm-thumbs button{width:74px; height:58px; padding:3px; background:#fff; border:1.5px solid var(--line); border-radius:10px; cursor:pointer;}
 #pm-thumbs button img{width:100%; height:100%; object-fit:contain; display:block;}
 #pm-thumbs button.on{border-color:var(--accent);}
+
+/* ===== v2.6 — بنر بدون برش، عکس در فضای خالی ===== */
+.hero .cover{height:auto; aspect-ratio:2172/724; max-width:1920px; margin:0 auto;}
+.hero .cover img{object-position:center;}
+@media(min-width:1921px){ .hero .cover{-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent); mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);} }
+.hero .wrap.profile{grid-template-columns:1fr auto; align-items:center; gap:56px; margin-top:0; padding:36px 24px 80px;}
+.hero .profile .intro{padding-top:0;}
+.hero .profile .portrait{order:2; width:280px;}
+.hero .profile .portrait img{border:none;}
+@media(max-width:860px){
+  .hero .wrap.profile{grid-template-columns:1fr; gap:22px; padding:24px 20px 56px;}
+  .hero .profile .portrait{order:-1; width:150px; margin:0;}
+}
 </style>
 </head>
 <body>
