@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hassannasiri.ir/</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://hassannasiri.ir/Resume.pdf</loc><lastmod>2026-09-23</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://nasiri2752.github.io/</loc><lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://nasiri2752.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://nasiri2752.github.io/en.html"/></url>
+  <url><loc>https://nasiri2752.github.io/en.html</loc><lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://nasiri2752.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://nasiri2752.github.io/en.html"/></url>
+  <url><loc>https://nasiri2752.github.io/Resume.pdf</loc><lastmod>2026-09-25</lastmod></url>
 </urlset>
