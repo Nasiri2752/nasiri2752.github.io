@@ -4,8 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hassan Nasiri Khonsari — Mechanical & Mechatronics Design Engineer</title>
-<!-- nasiri site v3.2 en -->
+<!-- nasiri site v3.3 en -->
 <meta name="description" content="Hassan Nasiri Khonsari, mechanical and mechatronics design engineer: industrial robots, custom machinery and automation. MSc, Sharif University of Technology; Alborz Prize laureate.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="logo-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="logo-192.png">
+<link rel="apple-touch-icon" href="logo-180.png">
 <link rel="canonical" href="https://nasiri2752.github.io/en.html">
 <link rel="alternate" hreflang="fa" href="https://nasiri2752.github.io/">
 <link rel="alternate" hreflang="en" href="https://nasiri2752.github.io/en.html">
@@ -327,12 +331,25 @@ nav .wrap{justify-content:center;}
 .cform{text-align:left;} .hero .headline{text-align:left;} #pm-cap{right:auto; left:14px;}
 .hero::after{left:auto; right:-80px;}
 @media(max-width:860px){ .fab-phone{left:auto; right:18px;} }
+
+/* ===== v3.3 — لوگو و پخش‌کننده‌ی رسانه ===== */
+.nav-logo{display:flex; flex-shrink:0; width:38px; height:38px; margin-inline-end:10px;}
+.nav-logo img{width:38px; height:38px; display:block;}
+.m-play{position:absolute; inset:0; width:100%; height:100%; padding:0; border:0; cursor:pointer; background:#1A1D20;}
+.m-play img{width:100%; height:100%; object-fit:cover; display:block; transition:.25s;}
+.m-play:hover img{filter:brightness(.85);}
+.m-pbtn{position:absolute; top:50%; left:50%; width:62px; height:62px; margin:-31px 0 0 -31px; border-radius:50%;
+  background:rgba(196,85,31,.92); box-shadow:0 8px 24px -6px rgba(0,0,0,.6);}
+.m-pbtn::after{content:''; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%);
+  border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #fff;}
+@media(max-width:860px){ nav .wrap{flex-direction:row!important; align-items:center;} .menu{flex:1; min-width:0;} .nav-logo{width:34px;height:34px;} .nav-logo img{width:34px;height:34px;} }
 </style>
 </head>
 <body>
 
 <!-- ناوبری -->
 <nav><div class="wrap">
+  <a class="nav-logo" href="#top" aria-label="Home"><img src="logo-64.png" alt="" width="38" height="38"></a>
   <div class="menu">
     <a href="#honors">Honors</a>
     <a href="#about">About</a>
@@ -633,22 +650,28 @@ const PROJECTS = [{"n": "01", "title": "Postal Sorting Robots", "year": "2021 �
 <script>
 (function(){
   var L=document.documentElement.lang.slice(0,2)==='en'?'en':'fa';
-  var M=(window.MEDIA||[]).filter(function(m){return m && (m.aparat||m.url);});
+  var M=(window.MEDIA||[]).filter(function(m){return m && (m.aparat||m.tw||m.url);});
   var sec=document.getElementById('media');
   if(!M.length){ if(sec) sec.remove(); var a=document.querySelector('.menu a[href="#media"]'); if(a) a.remove(); return; }
   var g=document.getElementById('m-grid');
   function t(m,k){ return m[k+'_'+L]||m[k+'_fa']||m[k+'_en']||''; }
-  M.forEach(function(m){
-    var asLink=!m.aparat && !m.more_url; var el=document.createElement(asLink?'a':'div'); el.className='m-card';
+  function q(s){ return String(s).replace(/"/g,'&quot;'); }
+  function src(m){ return m.tw ? 'https://telewebion.net/embed/episode/'+encodeURIComponent(m.tw)
+                                : 'https://www.aparat.com/video/video/embed/videohash/'+encodeURIComponent(m.aparat)+'/vt/frame'; }
+  var vids=M.filter(function(m){return m.aparat||m.tw;}), links=M.filter(function(m){return !(m.aparat||m.tw);});
+  vids.concat(links).forEach(function(m){
+    var el=document.createElement('div'); el.className='m-card';
     var meta='<div class="m-meta">'+[t(m,'source'),t(m,'date')].filter(Boolean).join(' · ')+'</div>'+(t(m,'desc')?'<p class="m-desc">'+t(m,'desc')+'</p>':'');
     var more=m.more_url?'<a class="m-more" href="'+m.more_url+'" target="_blank" rel="noopener">'+t(m,'more')+'</a>':'';
-    if(m.aparat){
-      el.innerHTML='<div class="m-vid"><iframe src="https://www.aparat.com/video/video/embed/videohash/'+encodeURIComponent(m.aparat)+'/vt/frame" title="'+t(m,'title').replace(/"/g,'&quot;')+'" allowfullscreen loading="lazy"></iframe></div><div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+more+'</div>';
-    } else if(!asLink){
-      el.innerHTML='<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+' ↗</a></h3>'+meta+more+'</div>';
+    if(m.aparat||m.tw){
+      el.innerHTML='<div class="m-vid">'+(m.poster
+          ? '<button type="button" class="m-play" aria-label="'+q((L==='en'?'Play: ':'پخش: ')+t(m,'title'))+'"><img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540"><span class="m-pbtn"></span></button>'
+          : '<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allowfullscreen loading="lazy"></iframe>')
+        +'</div><div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+more+'</div>';
+      var b=el.querySelector('.m-play');
+      if(b) b.onclick=function(){ b.parentNode.innerHTML='<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allow="autoplay; fullscreen" allowfullscreen></iframe>'; };
     } else {
-      el.href=m.url; el.target='_blank'; el.rel='noopener'; el.classList.add('m-link');
-      el.innerHTML='<div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+'</div><span class="m-go">↗</span>';
+      el.innerHTML='<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+' ↗</a></h3>'+meta+more+'</div>';
     }
     g.appendChild(el);
   });

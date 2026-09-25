@@ -4,8 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حسن نصیری خونساری — مهندس مکانیک و مکاترونیک</title>
-<!-- nasiri site v3.2 -->
+<!-- nasiri site v3.3 -->
 <meta name="description" content="حسن نصیری خونساری، مهندس طراحی مکانیک و مکاترونیک؛ ربات‌های صنعتی، ماشین‌آلات سفارشی و اتوماسیون. کارشناسی ارشد دانشگاه صنعتی شریف و برگزیده‌ی جشنواره‌ی البرز.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="logo-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="logo-192.png">
+<link rel="apple-touch-icon" href="logo-180.png">
 <link rel="canonical" href="https://nasiri2752.github.io/">
 <link rel="alternate" hreflang="fa" href="https://nasiri2752.github.io/">
 <link rel="alternate" hreflang="en" href="https://nasiri2752.github.io/en.html">
@@ -320,12 +324,25 @@ nav .wrap{justify-content:center;}
 .m-title{color:inherit;} .m-title:hover{color:var(--accent-d);}
 .m-go{padding:0 20px; font-size:20px; color:var(--accent-d);}
 @media(max-width:860px){ .m-grid{grid-template-columns:1fr;} }
+
+/* ===== v3.3 — لوگو و پخش‌کننده‌ی رسانه ===== */
+.nav-logo{display:flex; flex-shrink:0; width:38px; height:38px; margin-inline-end:10px;}
+.nav-logo img{width:38px; height:38px; display:block;}
+.m-play{position:absolute; inset:0; width:100%; height:100%; padding:0; border:0; cursor:pointer; background:#1A1D20;}
+.m-play img{width:100%; height:100%; object-fit:cover; display:block; transition:.25s;}
+.m-play:hover img{filter:brightness(.85);}
+.m-pbtn{position:absolute; top:50%; left:50%; width:62px; height:62px; margin:-31px 0 0 -31px; border-radius:50%;
+  background:rgba(196,85,31,.92); box-shadow:0 8px 24px -6px rgba(0,0,0,.6);}
+.m-pbtn::after{content:''; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%);
+  border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #fff;}
+@media(max-width:860px){ nav .wrap{flex-direction:row!important; align-items:center;} .menu{flex:1; min-width:0;} .nav-logo{width:34px;height:34px;} .nav-logo img{width:34px;height:34px;} }
 </style>
 </head>
 <body>
 
 <!-- ناوبری -->
 <nav><div class="wrap">
+  <a class="nav-logo" href="#top" aria-label="صفحه‌ی اصلی"><img src="logo-64.png" alt="" width="38" height="38"></a>
   <div class="menu">
     <a href="#honors">افتخارات</a>
     <a href="#about">درباره</a>
@@ -399,7 +416,7 @@ nav .wrap{justify-content:center;}
       دانشگاه علم و صنعت ایران گذراندم. دو بار مقام دوم جشنواره‌ی جوان خوارزمی را کسب کرده‌ام و برگزیده‌ی جشنواره‌ی البرز
       در بخش فناوران و مخترعان شده‌ام.</p>
       <p>از ربات‌های سورتر پستی که نسل‌های اول و دومش در تهران و کرمانشاه به کار افتاد و نسل سومش در تیراژ ۲۰۰ دستگاه
-      به تولید رسید، تا دستگاه تست پروتز زانو، تغذیه‌کننده‌ی پودر برای رسوب مستقیم فلز، پنج پرینتر سه‌بعدی صنعتی و
+      به تولید رسید، تا دستگاه تست پروتز زانو، تغذیه‌کننده‌ی پودر برای لایه‌نشانی مستقیم فلز، پنج پرینتر سه‌بعدی صنعتی و
       ناوگان هفت‌تایی ربات خدماتی.</p>
       <p>این روزها در کارون، طراحی قطعه و مجموعه، بازرسی ابعادی و جوش، و مدیریت کارگاه‌های ماشین‌کاری و ساخت بیرونی
       را بر عهده دارم؛ تا امروز بیش از ۸٬۰۰۰ قطعه‌ی صنعتی تحویل شده است.</p>
@@ -586,7 +603,7 @@ nav .wrap{justify-content:center;}
   </div>
 </div>
 <script>
-const PROJECTS = [{"n": "۰۱", "title": "ربات‌های سورتر پستی", "year": "۱۳۹۹ تا ۱۴۰۴", "tags": ["طراحی مکانیک", "رباتیک خودگردان", "تولید انبوه"], "desc": ["نخستین ربات سورتر پستی از این نوع در ایران، برای تفکیک خودکار مرسولات در شرکت ملی پست. نسل‌های اول و دوم را طراحی و ساختیم: ۵۰ دستگاه برای مرکز توزیع مرسولات چهارراه لشکر تهران و ۳۰ دستگاه برای مرکز توزیع کرمانشاه، در مجموع ۸۰ ربات. طراحی نسل سوم هم کار من است که در تیراژ ۲۰۰ دستگاه به تولید رسید.", "طراحی مکانیزم تخلیه‌ی بار، سامانه‌ی توزین، استراکچر و سیستم حرکت ربات‌ها بر عهده‌ی من بود و به‌عنوان مدیر واحد مهندسی مکانیک تنسور، هماهنگی کارگاه‌ها و سرپرستی تیم مونتاژ را هم انجام می‌دادم. این پروژه مقام دوم بیست‌وششمین جشنواره‌ی جوان خوارزمی را گرفت."], "imgs": [{"src": "p-sorter-1.webp", "w": 1344, "h": 896, "cap": "نسل اول"}, {"src": "p-sorter-2.webp", "w": 1288, "h": 924, "cap": "نسل دوم"}, {"src": "p-sorter-3.webp", "w": 1288, "h": 952, "cap": "نسل سوم"}]}, {"n": "۰۲", "title": "دستگاه تست تقید و پایداری پروتز زانو", "year": "۱۴۰۰", "tags": ["تجهیزات پزشکی", "اتوماسیون", "ASTM F1223"], "desc": ["دستگاهی برای آزمون تقید و پایداری پروتز کامل زانو در شش درجه‌ی آزادی، مطابق استاندارد ASTM F1223؛ پایان‌نامه‌ی کارشناسی ارشد من در دانشگاه صنعتی شریف، زیر نظر دکتر محمد دورعلی و با مشاوره‌ی دکتر فرهمند. طراحی مکانیکی، معماری اتوماسیون، برنامه‌نویسی PLC و توسعه‌ی HMI را خودم انجام دادم. دستگاه تحویل شده و برای کارهای پژوهشی استفاده می‌شود.", "پیش از این، نمونه‌ی مشابهی در ایران وجود نداشت و معادل‌های تجاری آن را شرکت‌هایی مثل EndoLab آلمان و AMTI آمریکا می‌سازند. این پروژه عنوان برترین پایان‌نامه‌ی فناورانه‌ی دانشکده، مقام دوم بیست‌وچهارمین جشنواره‌ی جوان خوارزمی و برگزیدگی در شصت‌وچهارمین جشنواره‌ی البرز را به دست آورد. بعدها همین دستگاه را برای مطالعه‌ی اصطکاک میان استخوان و ایمپلنت بازپیکربندی کردم که حاصلش مقاله‌ای در Scientific Reports شد."], "imgs": [{"src": "p-knee.webp", "w": 952, "h": 1288, "cap": ""}]}, {"title": "سامانه‌ی تغذیه‌ی پودر DMD", "year": "۱۳۹۸", "tags": ["ساخت افزایشی فلز", "کنترل", "الکترونیک"], "desc": ["تغذیه‌کننده‌ی پودر برای فرآیند رسوب مستقیم فلز با لیزر (DMD). طراحی تفصیلی، ساخت و پیاده‌سازی کامل الکترونیک، کنترل و منطق دستگاه را انجام دادم؛ نرخ تغذیه در بازه‌ی ۱ تا ۱۰۰ گرم بر دقیقه کنترل می‌شود.", "این پروژه پایان‌نامه‌ی کارشناسی من در دانشگاه علم و صنعت ایران بود، زیر نظر دکتر سید علی نیکنام."], "n": "۰۳", "imgs": [{"src": "p-dmd.webp", "w": 1288, "h": 952, "cap": ""}]}, {"n": "۰۴", "title": "پرینترهای سه‌بعدی FDM صنعتی", "year": "۱۳۹۹ تا ۱۴۰۲", "tags": ["پرینت سه‌بعدی", "طراحی مکانیزم", "الکترونیک و فرم‌ور"], "desc": ["پنج دستگاه که از صفر طراحی و ساختم و نسل‌به‌نسل بازمهندسی شدند: از یک دستگاه ۲۰۰×۲۰۰×۱۵۰ میلی‌متری تا ماشینی صنعتی با حجم کاری ۵۰۰×۵۰۰×۴۰۰ میلی‌متر که روی همه‌ی محورها بال‌اسکرو و ریل خطی صنعتی دارد.", "سازه، مکانیزم، انتخاب موتورها، الکترونیک، فرم‌ور و بهینه‌سازی اسلایسر را همه مستقل انجام دادم."], "imgs": [{"src": "p-printer-1.webp", "w": 1288, "h": 952, "cap": "نسل اول — ۳۰×۳۰×۴۰ سانتی‌متر"}, {"src": "p-printer-2.webp", "w": 756, "h": 1008, "cap": "نسل دوم — ۳۰×۳۰×۴۰ سانتی‌متر"}, {"src": "p-printer-3.webp", "w": 980, "h": 1232, "cap": "نسل سوم — ۵۰×۵۰×۴۰ سانتی‌متر"}]}, {"n": "۰۵", "title": "ربات‌های گارسون", "year": "۱۴۰۰", "tags": ["رباتیک خدماتی", "طراحی بدنه"], "desc": ["نخستین ربات گارسون از این نوع در ایران؛ طراحی، ساخت و مونتاژ مکانیکی ناوگانی هفت‌تایی از ربات‌های گارسون برای حمل و سرو غذا در رستوران.", "تمرکز اصلی روی شاسی و سیستم حرکت بود تا ربات‌ها روی کف ناهموار رستوران هم پایدار و قابل اعتماد کار کنند؛ بدنه هم با در نظر گرفتن ایمنی و ظاهر مناسب محیط پذیرایی طراحی شد."], "imgs": [{"src": "p-waiter.webp", "w": 896, "h": 1344, "cap": ""}]}, {"n": "۰۶", "title": "CNC صنعتی دوکاره", "year": "۱۴۰۲", "tags": ["CNC", "CAM", "طراحی سازه"], "desc": ["یک دستگاه CNC صنعتی برای برش چوب و فلزات سبک با میز کاری بزرگ (حدود ۱۰۰×۱۰۰ سانتی‌متر) که به‌صورت ماژولار طراحی شده است؛ یعنی با تعویض ساده‌ی هد، می‌تواند به یک پرینتر سه‌بعدی قدرتمند تبدیل شود.", "طراحی سازه، انتخاب درایوها و موتورها و راه‌اندازی سیستم کنترل با G-Code بخشی از این کار بود. هدف، ساخت یک ماشین چندکاره و مقرون‌به‌صرفه برای کارگاه‌های کوچک و متوسط بود."], "imgs": [{"src": "p-cnc.webp", "w": 1372, "h": 896, "cap": "دستگاه"}, {"src": "p-cnc-panel.webp", "w": 1148, "h": 1064, "cap": "تابلو برق"}, {"src": "p-cnc-panel-open.webp", "w": 952, "h": 1288, "cap": "داخل تابلو برق"}]}, {"n": "۰۷", "title": "ربات نقاش کابلی", "year": "۱۳۹۹", "tags": ["ربات کابلی", "پردازش تصویر", "کنترل"], "desc": ["یک ربات نقاش بر پایه‌ی مکانیزم ربات‌های کابلی که قلم را با کنترل طول کابل‌ها در صفحه حرکت می‌دهد. این ربات می‌تواند هر عکس را به یک نقاشی سیاه‌قلم تبدیل کند و روی بوم بکشد (در تصویر، طرح یک گل رز را کشیده است).", "بخش اصلی کار، الگوریتم تبدیل تصویر به مسیر قلم و هماهنگی دقیق حرکت کابل‌ها برای رسیدن قلم به نقطه‌ی دلخواه بود."], "imgs": [{"src": "p-painter.webp", "w": 896, "h": 1344, "cap": ""}]}];
+const PROJECTS = [{"n": "۰۱", "title": "ربات‌های سورتر پستی", "year": "۱۳۹۹ تا ۱۴۰۴", "tags": ["طراحی مکانیک", "رباتیک خودگردان", "تولید انبوه"], "desc": ["نخستین ربات سورتر پستی از این نوع در ایران، برای تفکیک خودکار مرسولات در شرکت ملی پست. نسل‌های اول و دوم را طراحی و ساختیم: ۵۰ دستگاه برای مرکز توزیع مرسولات چهارراه لشکر تهران و ۳۰ دستگاه برای مرکز توزیع کرمانشاه، در مجموع ۸۰ ربات. طراحی نسل سوم هم کار من است که در تیراژ ۲۰۰ دستگاه به تولید رسید.", "طراحی مکانیزم تخلیه‌ی بار، سامانه‌ی توزین، استراکچر و سیستم حرکت ربات‌ها بر عهده‌ی من بود و به‌عنوان مدیر واحد مهندسی مکانیک تنسور، هماهنگی کارگاه‌ها و سرپرستی تیم مونتاژ را هم انجام می‌دادم. این پروژه مقام دوم بیست‌وششمین جشنواره‌ی جوان خوارزمی را گرفت."], "imgs": [{"src": "p-sorter-1.webp", "w": 1344, "h": 896, "cap": "نسل اول"}, {"src": "p-sorter-2.webp", "w": 1288, "h": 924, "cap": "نسل دوم"}, {"src": "p-sorter-3.webp", "w": 1288, "h": 952, "cap": "نسل سوم"}]}, {"n": "۰۲", "title": "دستگاه تست تقید و پایداری پروتز زانو", "year": "۱۴۰۰", "tags": ["تجهیزات پزشکی", "اتوماسیون", "ASTM F1223"], "desc": ["دستگاهی برای آزمون تقید و پایداری پروتز کامل زانو در شش درجه‌ی آزادی، مطابق استاندارد ASTM F1223؛ پایان‌نامه‌ی کارشناسی ارشد من در دانشگاه صنعتی شریف، زیر نظر دکتر محمد دورعلی و با مشاوره‌ی دکتر فرهمند. طراحی مکانیکی، معماری اتوماسیون، برنامه‌نویسی PLC و توسعه‌ی HMI را خودم انجام دادم. دستگاه تحویل شده و برای کارهای پژوهشی استفاده می‌شود.", "پیش از این، نمونه‌ی مشابهی در ایران وجود نداشت و معادل‌های تجاری آن را شرکت‌هایی مثل EndoLab آلمان و AMTI آمریکا می‌سازند. این پروژه عنوان برترین پایان‌نامه‌ی فناورانه‌ی دانشکده، مقام دوم بیست‌وچهارمین جشنواره‌ی جوان خوارزمی و برگزیدگی در شصت‌وچهارمین جشنواره‌ی البرز را به دست آورد. بعدها همین دستگاه را برای مطالعه‌ی اصطکاک میان استخوان و ایمپلنت بازپیکربندی کردم که حاصلش مقاله‌ای در Scientific Reports شد."], "imgs": [{"src": "p-knee.webp", "w": 952, "h": 1288, "cap": ""}]}, {"title": "سامانه‌ی تغذیه‌ی پودر DMD", "year": "۱۳۹۸", "tags": ["ساخت افزایشی فلز", "کنترل", "الکترونیک"], "desc": ["تغذیه‌کننده‌ی پودر برای فرآیند لایه‌نشانی مستقیم فلز با لیزر (DMD). طراحی تفصیلی، ساخت و پیاده‌سازی کامل الکترونیک، کنترل و منطق دستگاه را انجام دادم؛ نرخ تغذیه در بازه‌ی ۱ تا ۱۰۰ گرم بر دقیقه کنترل می‌شود.", "این پروژه پایان‌نامه‌ی کارشناسی من در دانشگاه علم و صنعت ایران بود، زیر نظر دکتر سید علی نیکنام."], "n": "۰۳", "imgs": [{"src": "p-dmd.webp", "w": 1288, "h": 952, "cap": ""}]}, {"n": "۰۴", "title": "پرینترهای سه‌بعدی FDM صنعتی", "year": "۱۳۹۹ تا ۱۴۰۲", "tags": ["پرینت سه‌بعدی", "طراحی مکانیزم", "الکترونیک و فرم‌ور"], "desc": ["پنج دستگاه که از صفر طراحی و ساختم و نسل‌به‌نسل بازمهندسی شدند: از یک دستگاه ۲۰۰×۲۰۰×۱۵۰ میلی‌متری تا ماشینی صنعتی با حجم کاری ۵۰۰×۵۰۰×۴۰۰ میلی‌متر که روی همه‌ی محورها بال‌اسکرو و ریل خطی صنعتی دارد.", "سازه، مکانیزم، انتخاب موتورها، الکترونیک، فرم‌ور و بهینه‌سازی اسلایسر را همه مستقل انجام دادم."], "imgs": [{"src": "p-printer-1.webp", "w": 1288, "h": 952, "cap": "نسل اول — ۳۰×۳۰×۴۰ سانتی‌متر"}, {"src": "p-printer-2.webp", "w": 756, "h": 1008, "cap": "نسل دوم — ۳۰×۳۰×۴۰ سانتی‌متر"}, {"src": "p-printer-3.webp", "w": 980, "h": 1232, "cap": "نسل سوم — ۵۰×۵۰×۴۰ سانتی‌متر"}]}, {"n": "۰۵", "title": "ربات‌های گارسون", "year": "۱۴۰۰", "tags": ["رباتیک خدماتی", "طراحی بدنه"], "desc": ["نخستین ربات گارسون از این نوع در ایران؛ طراحی، ساخت و مونتاژ مکانیکی ناوگانی هفت‌تایی از ربات‌های گارسون برای حمل و سرو غذا در رستوران.", "تمرکز اصلی روی شاسی و سیستم حرکت بود تا ربات‌ها روی کف ناهموار رستوران هم پایدار و قابل اعتماد کار کنند؛ بدنه هم با در نظر گرفتن ایمنی و ظاهر مناسب محیط پذیرایی طراحی شد."], "imgs": [{"src": "p-waiter.webp", "w": 896, "h": 1344, "cap": ""}]}, {"n": "۰۶", "title": "CNC صنعتی دوکاره", "year": "۱۴۰۲", "tags": ["CNC", "CAM", "طراحی سازه"], "desc": ["یک دستگاه CNC صنعتی برای برش چوب و فلزات سبک با میز کاری بزرگ (حدود ۱۰۰×۱۰۰ سانتی‌متر) که به‌صورت ماژولار طراحی شده است؛ یعنی با تعویض ساده‌ی هد، می‌تواند به یک پرینتر سه‌بعدی قدرتمند تبدیل شود.", "طراحی سازه، انتخاب درایوها و موتورها و راه‌اندازی سیستم کنترل با G-Code بخشی از این کار بود. هدف، ساخت یک ماشین چندکاره و مقرون‌به‌صرفه برای کارگاه‌های کوچک و متوسط بود."], "imgs": [{"src": "p-cnc.webp", "w": 1372, "h": 896, "cap": "دستگاه"}, {"src": "p-cnc-panel.webp", "w": 1148, "h": 1064, "cap": "تابلو برق"}, {"src": "p-cnc-panel-open.webp", "w": 952, "h": 1288, "cap": "داخل تابلو برق"}]}, {"n": "۰۷", "title": "ربات نقاش کابلی", "year": "۱۳۹۹", "tags": ["ربات کابلی", "پردازش تصویر", "کنترل"], "desc": ["یک ربات نقاش بر پایه‌ی مکانیزم ربات‌های کابلی که قلم را با کنترل طول کابل‌ها در صفحه حرکت می‌دهد. این ربات می‌تواند هر عکس را به یک نقاشی سیاه‌قلم تبدیل کند و روی بوم بکشد (در تصویر، طرح یک گل رز را کشیده است).", "بخش اصلی کار، الگوریتم تبدیل تصویر به مسیر قلم و هماهنگی دقیق حرکت کابل‌ها برای رسیدن قلم به نقطه‌ی دلخواه بود."], "imgs": [{"src": "p-painter.webp", "w": 896, "h": 1344, "cap": ""}]}];
 (function(){
   const list = document.getElementById('proj-list');
   const esc = t => String(t).replace(/"/g,'&quot;');
@@ -633,22 +650,28 @@ const PROJECTS = [{"n": "۰۱", "title": "ربات‌های سورتر پستی"
 <script>
 (function(){
   var L=document.documentElement.lang.slice(0,2)==='en'?'en':'fa';
-  var M=(window.MEDIA||[]).filter(function(m){return m && (m.aparat||m.url);});
+  var M=(window.MEDIA||[]).filter(function(m){return m && (m.aparat||m.tw||m.url);});
   var sec=document.getElementById('media');
   if(!M.length){ if(sec) sec.remove(); var a=document.querySelector('.menu a[href="#media"]'); if(a) a.remove(); return; }
   var g=document.getElementById('m-grid');
   function t(m,k){ return m[k+'_'+L]||m[k+'_fa']||m[k+'_en']||''; }
-  M.forEach(function(m){
-    var asLink=!m.aparat && !m.more_url; var el=document.createElement(asLink?'a':'div'); el.className='m-card';
+  function q(s){ return String(s).replace(/"/g,'&quot;'); }
+  function src(m){ return m.tw ? 'https://telewebion.net/embed/episode/'+encodeURIComponent(m.tw)
+                                : 'https://www.aparat.com/video/video/embed/videohash/'+encodeURIComponent(m.aparat)+'/vt/frame'; }
+  var vids=M.filter(function(m){return m.aparat||m.tw;}), links=M.filter(function(m){return !(m.aparat||m.tw);});
+  vids.concat(links).forEach(function(m){
+    var el=document.createElement('div'); el.className='m-card';
     var meta='<div class="m-meta">'+[t(m,'source'),t(m,'date')].filter(Boolean).join(' · ')+'</div>'+(t(m,'desc')?'<p class="m-desc">'+t(m,'desc')+'</p>':'');
     var more=m.more_url?'<a class="m-more" href="'+m.more_url+'" target="_blank" rel="noopener">'+t(m,'more')+'</a>':'';
-    if(m.aparat){
-      el.innerHTML='<div class="m-vid"><iframe src="https://www.aparat.com/video/video/embed/videohash/'+encodeURIComponent(m.aparat)+'/vt/frame" title="'+t(m,'title').replace(/"/g,'&quot;')+'" allowfullscreen loading="lazy"></iframe></div><div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+more+'</div>';
-    } else if(!asLink){
-      el.innerHTML='<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+' ↗</a></h3>'+meta+more+'</div>';
+    if(m.aparat||m.tw){
+      el.innerHTML='<div class="m-vid">'+(m.poster
+          ? '<button type="button" class="m-play" aria-label="'+q((L==='en'?'Play: ':'پخش: ')+t(m,'title'))+'"><img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540"><span class="m-pbtn"></span></button>'
+          : '<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allowfullscreen loading="lazy"></iframe>')
+        +'</div><div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+more+'</div>';
+      var b=el.querySelector('.m-play');
+      if(b) b.onclick=function(){ b.parentNode.innerHTML='<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allow="autoplay; fullscreen" allowfullscreen></iframe>'; };
     } else {
-      el.href=m.url; el.target='_blank'; el.rel='noopener'; el.classList.add('m-link');
-      el.innerHTML='<div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+'</div><span class="m-go">↗</span>';
+      el.innerHTML='<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+' ↗</a></h3>'+meta+more+'</div>';
     }
     g.appendChild(el);
   });

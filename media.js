@@ -1,39 +1,38 @@
 /* فهرست رسانه‌ها — برای هر دو نسخه‌ی فارسی و انگلیسی سایت.
-   تا وقتی خالی است، بخش «رسانه» در سایت نمایش داده نمی‌شود.
-   نمونه‌ی ویدیوی آپارات (شناسه همان بخش آخر لینک است: aparat.com/v/XXXX):
-   { aparat: "XXXX", title_fa: "…", title_en: "…", source_fa: "آپارات", source_en: "Aparat", date_fa: "۱۴۰۵", date_en: "2026",
-     desc_fa: "…", desc_en: "…", more_url: "لینک اختیاری دوم", more_fa: "…", more_en: "…" }
-   نمونه‌ی خبر یا مصاحبه‌ی متنی:
-   { url: "https://…", title_fa: "…", title_en: "…", source_fa: "…", source_en: "…", date_fa: "…", date_en: "…" }
+   ویدیوی تلوبیون:  tw: "0x…"        (بخش آخر لینک telewebion.net/episode/0x…)
+   ویدیوی آپارات:   aparat: "xxxx"    (بخش آخر لینک aparat.com/v/xxxx)
+   poster: نام فایل فریم انتخابی که قبل از پخش نمایش داده می‌شود
+   خبر متنی:        url: "https://…"
+   فیلدهای متنی: title_fa/en ، source_fa/en ، date_fa/en ، desc_fa/en ، more_url + more_fa/en (اختیاری)
 */
 window.MEDIA = [
  {
-  "aparat": "gfl7a8e",
-  "title_fa": "گفت‌وگو با بنیاد البرز",
-  "title_en": "Interview with the Alborz Foundation",
+  "aparat": "xdw0223",
+  "poster": "media-alborz.jpg",
+  "title_fa": "مراسم شصت‌وچهارمین جایزه‌ی البرز",
+  "title_en": "64th Alborz Prize ceremony",
   "source_fa": "بنیاد البرز",
   "source_en": "Alborz Foundation",
   "date_fa": "۳ شهریور ۱۴۰۵",
   "date_en": "25 Aug 2026",
-  "desc_fa": "گفت‌وگویی کوتاه درباره‌ی تجربه‌هایی که مسیر علمی و حرفه‌ای او را ساخته‌اند، جایگاه جایزه‌ی البرز به‌عنوان جایزه‌ای مردمی، نقش مردم و واقفان در حمایت از علم و پژوهش، و پیامش به جوانانی که می‌خواهند در این مسیر قدم بگذارند. ضبط‌شده در سالن همایش‌های بین‌المللی دانشگاه شهید بهشتی.",
-  "desc_en": "A short conversation about the experiences that shaped his academic and professional path, the Alborz Prize as a publicly supported award, the role of the public and donors in supporting science and research, and his message to young people starting out on this path. Recorded at the International Conference Hall of Shahid Beheshti University.",
-  "more_url": "https://www.aparat.com/v/xdw0223",
-  "more_fa": "نسخه‌ی کامل مراسم اهدای جوایز ↗",
-  "more_en": "Full award ceremony ↗"
+  "desc_fa": "نسخه‌ی کامل مراسم اهدای جوایز، از کانال بنیاد البرز؛ همراه با گفت‌وگویی کوتاه درباره‌ی تجربه‌هایی که مسیر علمی و حرفه‌ای او را ساخته‌اند، جایگاه جایزه‌ی البرز به‌عنوان جایزه‌ای مردمی و نقش واقفان در حمایت از علم و پژوهش. سالن همایش‌های بین‌المللی دانشگاه شهید بهشتی.",
+  "desc_en": "The full award ceremony, from the Alborz Foundation’s channel, including a short conversation about the experiences that shaped his academic and professional path, the Alborz Prize as a publicly supported award, and the role of donors in supporting science and research. International Conference Hall, Shahid Beheshti University."
  },
  {
-  "aparat": "lhl3158",
+  "tw": "0xd5fdaa5",
+  "poster": "media-ofogh.jpg",
   "title_fa": "مستند زندگی حسن نصیری خونساری",
   "title_en": "Documentary: Hassan Nasiri Khonsari",
-  "source_fa": "شبکه‌ی افق",
-  "source_en": "Ofogh TV",
-  "date_fa": "۱۶ اسفند ۱۴۰۲",
-  "date_en": "6 Mar 2024",
+  "source_fa": "شبکه‌ی افق، برنامه‌ی «تازه‌نفس»",
+  "source_en": "Ofogh TV, “Tazeh Nafas”",
+  "date_fa": "پخش: ۱۶ و ۱۷ خرداد ۱۴۰۳",
+  "date_en": "Aired 5–6 Jun 2024",
   "desc_fa": "مستندی درباره‌ی مسیر او؛ از علاقه به طراحی و ساخت دستگاه تا دانشگاه صنعتی شریف و پروژه‌های صنعتی. از نقش پروفسور محمد دورعلی و کارگاه خلاقه‌ی دانشکده‌ی مکانیک شریف و از پروژه‌هایی مثل ربات‌های سورتر پستی، پرینترهای سه‌بعدی و CNC صنعتی و دستگاه تست تقید و پایداری پروتز زانو صحبت می‌شود.",
-  "desc_en": "A documentary on his path, from an early interest in designing and building machines to Sharif University of Technology and industrial projects. It covers the role of Prof. Mohammad Durali and the Creative Workshop of Sharif's mechanical engineering faculty, and projects such as the postal sorting robots, 3D printers and industrial CNC, and the knee prosthesis constraint and stability test apparatus."
+  "desc_en": "A documentary on his path, from an early interest in designing and building machines to Sharif University of Technology and industrial projects. It covers the role of Prof. Mohammad Durali and the Creative Workshop of Sharif’s mechanical engineering faculty, and projects such as the postal sorting robots, 3D printers and industrial CNC, and the knee prosthesis constraint and stability test apparatus."
  },
  {
-  "aparat": "lrjr47c",
+  "tw": "0xac965d7",
+  "poster": "media-amoozesh.jpg",
   "title_fa": "گفت‌وگو در برنامه‌ی «و اما امروز»",
   "title_en": "Interview on “Va Amma Emrooz”",
   "source_fa": "شبکه‌ی آموزش",
@@ -42,6 +41,26 @@ window.MEDIA = [
   "date_en": "13 Jan 2024",
   "desc_fa": "گفت‌وگویی درباره‌ی مسیر زندگی و دوران تحصیل؛ اینکه این مسیر از کجا شروع شد، چه اتفاق‌هایی در سال‌های تحصیل رقم خورد و به کجا رسید، و پروژه‌هایی که در این مسیر انجام شده است.",
   "desc_en": "A conversation about his life and student years: where the path began, what happened along the way and where it led, and the projects built during that time."
+ },
+ {
+  "tw": "0x5cc2d6f",
+  "poster": "media-ch1.jpg",
+  "title_fa": "گفت‌وگو در برنامه‌ی «ایران امروز»",
+  "title_en": "Interview on “Iran Emrooz”",
+  "source_fa": "شبکه‌ی یک",
+  "source_en": "IRIB TV1",
+  "date_fa": "۲۱ اسفند ۱۴۰۱",
+  "date_en": "12 Mar 2023"
+ },
+ {
+  "tw": "0x59748e1",
+  "poster": "media-ch6.jpg",
+  "title_fa": "گفت‌وگوی ویژه‌ی خبری: حمایت از برگزیدگان جشنواره‌ی خوارزمی",
+  "title_en": "Special news interview: support for Khwarizmi Festival winners",
+  "source_fa": "شبکه‌ی خبر (شبکه‌ی ۶)",
+  "source_en": "IRINN (TV6)",
+  "date_fa": "۹ اسفند ۱۴۰۱",
+  "date_en": "28 Feb 2023"
  },
  {
   "url": "https://www.irna.ir/news/85069178/",
