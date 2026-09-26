@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حسن نصیری خونساری — مهندس مکانیک و مکاترونیک</title>
-<!-- nasiri site v3.3 -->
+<!-- nasiri site v3.6 -->
 <meta name="description" content="حسن نصیری خونساری، مهندس طراحی مکانیک و مکاترونیک؛ ربات‌های صنعتی، ماشین‌آلات سفارشی و اتوماسیون. کارشناسی ارشد دانشگاه صنعتی شریف و برگزیده‌ی جشنواره‌ی البرز.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="logo-32.png">
@@ -331,18 +331,22 @@ nav .wrap{justify-content:center;}
 .m-play{position:absolute; inset:0; width:100%; height:100%; padding:0; border:0; cursor:pointer; background:#1A1D20;}
 .m-play img{width:100%; height:100%; object-fit:cover; display:block; transition:.25s;}
 .m-play:hover img{filter:brightness(.85);}
+.m-ext{position:absolute; bottom:10px; inset-inline-start:10px; background:rgba(26,29,32,.82); color:#fff; font-size:12.5px; font-weight:700; padding:5px 10px; border-radius:8px;}
 .m-pbtn{position:absolute; top:50%; left:50%; width:62px; height:62px; margin:-31px 0 0 -31px; border-radius:50%;
   background:rgba(196,85,31,.92); box-shadow:0 8px 24px -6px rgba(0,0,0,.6);}
 .m-pbtn::after{content:''; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%);
   border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #fff;}
 @media(max-width:860px){ nav .wrap{flex-direction:row!important; align-items:center;} .menu{flex:1; min-width:0;} .nav-logo{width:34px;height:34px;} .nav-logo img{width:34px;height:34px;} }
+
+/* ===== v3.4 ===== */
+a.m-play{display:block;}
+.m-ext{position:absolute; bottom:10px; inset-inline-end:10px; background:rgba(26,29,32,.85); color:#fff; font-size:12.5px; font-weight:700; padding:5px 11px; border-radius:8px;}
 </style>
 </head>
 <body>
 
 <!-- ناوبری -->
 <nav><div class="wrap">
-  <a class="nav-logo" href="#top" aria-label="صفحه‌ی اصلی"><img src="logo-64.png" alt="" width="38" height="38"></a>
   <div class="menu">
     <a href="#honors">افتخارات</a>
     <a href="#about">درباره</a>
@@ -658,18 +662,31 @@ const PROJECTS = [{"n": "۰۱", "title": "ربات‌های سورتر پستی"
   function q(s){ return String(s).replace(/"/g,'&quot;'); }
   function src(m){ return m.tw ? 'https://telewebion.net/embed/episode/'+encodeURIComponent(m.tw)
                                 : 'https://www.aparat.com/video/video/embed/videohash/'+encodeURIComponent(m.aparat)+'/vt/frame'; }
-  var vids=M.filter(function(m){return m.aparat||m.tw;}), links=M.filter(function(m){return !(m.aparat||m.tw);});
-  vids.concat(links).forEach(function(m){
+  M.slice().sort(function(a,b){ return (b.d||'').localeCompare(a.d||''); }).forEach(function(m){
     var el=document.createElement('div'); el.className='m-card';
     var meta='<div class="m-meta">'+[t(m,'source'),t(m,'date')].filter(Boolean).join(' · ')+'</div>'+(t(m,'desc')?'<p class="m-desc">'+t(m,'desc')+'</p>':'');
     var more=m.more_url?'<a class="m-more" href="'+m.more_url+'" target="_blank" rel="noopener">'+t(m,'more')+'</a>':'';
     if(m.aparat||m.tw){
+      if(m.tw){
+        var page='https://telewebion.net/episode/'+encodeURIComponent(m.tw);
+        el.innerHTML='<div class="m-vid"><a class="m-play" href="'+page+'" target="_blank" rel="noopener" aria-label="'+q((L==='en'?'Watch on Telewebion: ':'تماشا در تلوبیون: ')+t(m,'title'))+'">'
+          +'<img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540"><span class="m-pbtn"></span>'
+          +'<span class="m-ext">'+(L==='en'?'Watch on Telewebion ↗':'تماشا در تلوبیون ↗')+'</span></a></div>'
+          +'<div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+more+'</div>';
+        g.appendChild(el); return;
+      }
       el.innerHTML='<div class="m-vid">'+(m.poster
           ? '<button type="button" class="m-play" aria-label="'+q((L==='en'?'Play: ':'پخش: ')+t(m,'title'))+'"><img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540"><span class="m-pbtn"></span></button>'
           : '<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allowfullscreen loading="lazy"></iframe>')
         +'</div><div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+more+'</div>';
       var b=el.querySelector('.m-play');
-      if(b) b.onclick=function(){ b.parentNode.innerHTML='<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allow="autoplay; fullscreen" allowfullscreen></iframe>'; };
+      if(b && m.tw){
+        /* تلوبیون اجازه‌ی نمایش داخل سایت‌های دیگر را نمی‌دهد؛ پس فریم به صفحه‌ی خود ویدیو لینک می‌شود */
+        var a=document.createElement('a'); a.className='m-play'; a.href='https://telewebion.net/episode/'+encodeURIComponent(m.tw);
+        a.target='_blank'; a.rel='noopener'; a.setAttribute('aria-label',b.getAttribute('aria-label'));
+        a.innerHTML=b.innerHTML+'<span class="m-ext">'+(L==='en'?'Watch on Telewebion ↗':'تماشا در تلوبیون ↗')+'</span>';
+        b.replaceWith(a);
+      } else if(b) b.onclick=function(){ b.parentNode.innerHTML='<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allow="autoplay; fullscreen" allowfullscreen></iframe>'; };
     } else {
       el.innerHTML='<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+' ↗</a></h3>'+meta+more+'</div>';
     }
