@@ -20,7 +20,21 @@ window.MEDIA = [
   "more_fa": "نسخه‌ی وب‌سایت اصلی دانشگاه ↗",
   "more_en": "On the university’s main website ↗",
   "desc_fa": "گفت‌وگو با حسن نصیری خونساری، دانش‌آموخته‌ی کارشناسی ارشد مهندسی مکانیک دانشگاه صنعتی شریف و برگزیده‌ی جایزه‌ی البرز؛ درباره‌ی مسیر طراحی و ساخت ماشین‌آلات و سامانه‌های مکاترونیکی، از یک ایده‌ی ذهنی تا ساخت دستگاه.",
-  "desc_en": "An interview with Hassan Nasiri Khonsari, MSc graduate in mechanical engineering from Sharif University of Technology and Alborz Prize laureate, on designing and building machines and mechatronic systems — from an idea to a working machine."
+  "desc_en": "An interview with Hassan Nasiri Khonsari, MSc graduate in mechanical engineering from Sharif University of Technology and Alborz Prize laureate, on designing and building machines and mechatronic systems — from an idea to a working machine.",
+  "poster": "media-sharif.jpg"
+ },
+ {
+  "d": "2026-09-21",
+  "poster": "media-honor.jpg",
+  "url": "https://www.sharif.ir/fa/web/news/w/%D8%AA%D8%AC%D9%84%DB%8C%D9%84-%D8%A7%D8%B2-%D8%B3%D9%87-%D8%A8%D8%B1%DA%AF%D8%B2%DB%8C%D8%AF%D9%87-%D8%AC%D8%A7%DB%8C%D8%B2%D9%87-%D8%A7%D9%84%D8%A8%D8%B1%D8%B2-%D8%AF%D8%B1-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%B5%D9%86%D8%B9%D8%AA%DB%8C-%D8%B4",
+  "title_fa": "تجلیل از سه برگزیده جایزه البرز در دانشگاه صنعتی شریف",
+  "title_en": "Sharif University Honors Three Alborz Prize Laureates",
+  "source_fa": "دانشگاه صنعتی شریف",
+  "source_en": "Sharif University of Technology",
+  "date_fa": "۳۰ شهریور ۱۴۰۵",
+  "date_en": "21 Sep 2026",
+  "desc_fa": "حسن نصیری خونساری، دانش‌آموخته‌ی دانشگاه صنعتی شریف که در شصت‌وچهارمین دوره‌ی جایزه‌ی البرز در جمع برگزیدگان بخش فناوران و مخترعان قرار گرفت، در جلسه‌ی هیئت‌رئیسه‌ی دانشگاه تقدیر شد و لوح تقدیر و نشان نقره‌ی ضرب‌شده‌ی دانشگاه شریف به او تقدیم شد.",
+  "desc_en": "Hassan Nasiri Khonsari, a Sharif University of Technology graduate named among the laureates of the 64th Alborz Prize in the Technologists & Inventors category, was honored at a meeting of the university’s board and presented with a certificate of appreciation and a silver medal minted by Sharif University."
  },
  {
   "aparat": "xdw0223",
@@ -72,7 +86,10 @@ window.MEDIA = [
   "more_url": "https://tajrish.news/news/%D8%AE%D8%A8%D8%B1-%D8%A7%D9%86%D8%B1%DA%98%DB%8C-%D9%81%D9%86%D8%A7%D9%88%D8%B1%DB%8C/P46763-%D9%BE%D8%B1%D9%88%DA%98%D9%87-%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%D8%AC%D9%88%DB%8C%D8%A7%D9%86-%D8%A8%D8%A7%DB%8C%D8%AF-%D8%A8%D8%B1%DA%AF%D8%B1%D9%81%D8%AA%D9%87-%D8%A7%D8%B2-%D9%86%DB%8C%D8%A7%D8%B2%D9%87%D8%A7%DB%8C-%D8%B5%D9%86%D8%B9%D8%AA%DB%8C-%D8%A8%D8%A7%D8%B4%D8%AF.html",
   "more_fa": "بازنشر در تجریش‌نیوز ↗",
   "more_en": "Republished by Tajrish News ↗",
-  "d": "2023-04-07"
+  "d": "2023-04-07",
+  "poster": "media-irna.jpg",
+  "desc_fa": "گفت‌وگو با خبرگزاری ایرنا پس از جشنواره‌ی جوان خوارزمی، درباره‌ی پیوند پروژه‌های دانشجویی با نیازهای واقعی صنعت و تجربه‌ی ساخت دستگاه تست تقید و پایداری پروتز زانو.",
+  "desc_en": "An interview with IRNA after the Khwarizmi Youth Award, on linking student projects to real industry needs and the experience of building the knee prosthesis constraint and stability test apparatus."
  },
  {
   "tw": "0x5cc2d6f",
@@ -83,7 +100,9 @@ window.MEDIA = [
   "source_en": "IRIB TV1",
   "date_fa": "۲۱ اسفند ۱۴۰۱",
   "date_en": "12 Mar 2023",
-  "d": "2023-03-12"
+  "d": "2023-03-12",
+  "desc_fa": "گفت‌وگو در برنامه‌ی زنده‌ی «ایران امروز» شبکه‌ی یک، پس از کسب مقام دوم بیست‌وچهارمین جشنواره‌ی جوان خوارزمی؛ درباره‌ی مسیر تحصیل و پروژه‌های طراحی و ساخت.",
+  "desc_en": "A live interview on IRIB TV1’s “Iran Emrooz” after winning 2nd place at the 24th Khwarizmi Youth Award, on his studies and his design-and-build projects."
  },
  {
   "tw": "0x59748e1",
@@ -94,6 +113,8 @@ window.MEDIA = [
   "source_en": "IRINN (TV6)",
   "date_fa": "۹ اسفند ۱۴۰۱",
   "date_en": "28 Feb 2023",
-  "d": "2023-02-28"
+  "d": "2023-02-28",
+  "desc_fa": "گفت‌وگو در برنامه‌ی «گفت‌وگوی ویژه‌ی خبری» با موضوع حمایت از برگزیدگان جشنواره‌ی خوارزمی، پس از کسب مقام دوم بیست‌وچهارمین جشنواره‌ی جوان خوارزمی برای دستگاه تست تقید و پایداری پروتز زانو.",
+  "desc_en": "An interview on the “Special News Talk” program about support for Khwarizmi Festival winners, after winning 2nd place at the 24th Khwarizmi Youth Award for the knee prosthesis constraint and stability test apparatus."
  }
 ];

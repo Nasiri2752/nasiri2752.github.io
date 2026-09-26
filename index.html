@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حسن نصیری خونساری — مهندس مکانیک و مکاترونیک</title>
-<!-- nasiri site v3.6 -->
+<!-- nasiri site v3.7 -->
 <meta name="description" content="حسن نصیری خونساری، مهندس طراحی مکانیک و مکاترونیک؛ ربات‌های صنعتی، ماشین‌آلات سفارشی و اتوماسیون. کارشناسی ارشد دانشگاه صنعتی شریف و برگزیده‌ی جشنواره‌ی البرز.">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="logo-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="logo-192.png">
-<link rel="apple-touch-icon" href="logo-180.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="canonical" href="https://nasiri2752.github.io/">
 <link rel="alternate" hreflang="fa" href="https://nasiri2752.github.io/">
 <link rel="alternate" hreflang="en" href="https://nasiri2752.github.io/en.html">
@@ -331,7 +330,7 @@ nav .wrap{justify-content:center;}
 .m-play{position:absolute; inset:0; width:100%; height:100%; padding:0; border:0; cursor:pointer; background:#1A1D20;}
 .m-play img{width:100%; height:100%; object-fit:cover; display:block; transition:.25s;}
 .m-play:hover img{filter:brightness(.85);}
-.m-ext{position:absolute; bottom:10px; inset-inline-start:10px; background:rgba(26,29,32,.82); color:#fff; font-size:12.5px; font-weight:700; padding:5px 10px; border-radius:8px;}
+.m-ext{position:absolute; bottom:10px; inset-inline-start:10px; inset-inline-end:auto; width:max-content; max-width:calc(100% - 20px); display:block; background:rgba(26,29,32,.82); color:#fff; font-size:12.5px; font-weight:700; padding:5px 10px; border-radius:8px;}
 .m-pbtn{position:absolute; top:50%; left:50%; width:62px; height:62px; margin:-31px 0 0 -31px; border-radius:50%;
   background:rgba(196,85,31,.92); box-shadow:0 8px 24px -6px rgba(0,0,0,.6);}
 .m-pbtn::after{content:''; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%);
@@ -687,6 +686,11 @@ const PROJECTS = [{"n": "۰۱", "title": "ربات‌های سورتر پستی"
         a.innerHTML=b.innerHTML+'<span class="m-ext">'+(L==='en'?'Watch on Telewebion ↗':'تماشا در تلوبیون ↗')+'</span>';
         b.replaceWith(a);
       } else if(b) b.onclick=function(){ b.parentNode.innerHTML='<iframe src="'+src(m)+'" title="'+q(t(m,'title'))+'" allow="autoplay; fullscreen" allowfullscreen></iframe>'; };
+    } else if(m.poster){
+      el.innerHTML='<div class="m-vid"><a class="m-play" href="'+m.url+'" target="_blank" rel="noopener" aria-label="'+q((L==='en'?'Read: ':'مطالعه: ')+t(m,'title'))+'">'
+        +'<img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540">'
+        +'<span class="m-ext">'+(L==='en'?'Read the article ↗':'مطالعه‌ی خبر ↗')+'</span></a></div>'
+        +'<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+'</a></h3>'+meta+more+'</div>';
     } else {
       el.innerHTML='<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+' ↗</a></h3>'+meta+more+'</div>';
     }
