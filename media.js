@@ -5,6 +5,9 @@
    خبر متنی:        url: "https://…"
    فیلدهای متنی: title_fa/en ، source_fa/en ، date_fa/en ، desc_fa/en ، more_url + more_fa/en (اختیاری)
    d: تاریخ میلادی به شکل YYYY-MM-DD؛ کارت‌ها خودکار از جدیدترین به قدیمی‌ترین مرتب می‌شوند
+   cta_fa/en: متن دکمه‌ی روی تصویر خبر متنی (اختیاری؛ پیش‌فرض «مطالعه‌ی خبر»)
+   gallery: فهرست عکس‌های گالری (اختیاری)؛ برای هر عکس یک نسخه‌ی کوچک با پسوند -t هم لازم است
+            (مثلاً g-x-1.webp و g-x-1-t.webp)
 */
 window.MEDIA = [
  {
@@ -48,6 +51,31 @@ window.MEDIA = [
   "desc_fa": "نسخه‌ی کامل مراسم اهدای جوایز، از کانال بنیاد البرز؛ همراه با گفت‌وگویی کوتاه درباره‌ی تجربه‌هایی که مسیر علمی و حرفه‌ای او را ساخته‌اند، جایگاه جایزه‌ی البرز به‌عنوان جایزه‌ای مردمی و نقش واقفان در حمایت از علم و پژوهش. سالن همایش‌های بین‌المللی دانشگاه شهید بهشتی.",
   "desc_en": "The full award ceremony, from the Alborz Foundation’s channel, including a short conversation about the experiences that shaped his academic and professional path, the Alborz Prize as a publicly supported award, and the role of donors in supporting science and research. International Conference Hall, Shahid Beheshti University.",
   "d": "2026-08-25"
+ },
+ {
+  "d": "2024-10-02",
+  "url": "https://openaccess.ir/c/bmn14/paper_114387",
+  "poster": "media-bmn14.jpg",
+  "title_fa": "ایران در مسیر پیشرفت؛ پیوند دانشگاه و صنعت",
+  "title_en": "Iran on the Path of Progress: Linking Universities and Industry",
+  "source_fa": "مقاله‌ی چهاردهمین همایش ملی نخبگان",
+  "source_en": "Paper, 14th National Elites Conference",
+  "date_fa": "۱۱ مهر ۱۴۰۳",
+  "date_en": "2 Oct 2024",
+  "cta_fa": "مطالعه‌ی مقاله ↗",
+  "cta_en": "Read the paper ↗",
+  "more_url": "bmn14-paper.pdf",
+  "more_fa": "دانلود متن کامل مقاله (PDF) ↓",
+  "more_en": "Download the full paper (PDF, Persian) ↓",
+  "desc_fa": "مقاله‌ای برای چهاردهمین همایش ملی نخبگان با شعار «نخبگان، حکمرانی دانش‌بنیان»، درباره‌ی افزایش کارایی آموزش عالی کشور. پیشنهاد اصلی این است که معیار ارتقای استادان از تعداد مقاله به اثربخشی اقتصادی پروژه‌های صنعتی تغییر کند، پایان‌نامه‌های دکتری از نیازهای واقعی صنعت و با حامی مالی تعریف شوند و صنعت با مشوق‌هایی مثل معافیت مالیاتی، بخشی از نیازهایش را به دانشگاه بسپارد. به تعبیر مقاله، پژوهش وقتی ارزش دارد که به فناوری و ثروت تبدیل شود و گرهی از کار کشور باز کند؛ همان الگویی که ژاپن با فرستادن دانشجویانش برای حل مسائل مشخص کشور خودش دنبال کرد.",
+  "desc_en": "A paper for the 14th National Elites Conference, themed “Elites and Knowledge-Based Governance”, on making Iran’s higher education more effective. Its main proposal: base faculty promotion on the economic impact of industrial projects rather than paper counts, define PhD theses around real, funded industry needs, and encourage industry — for example through tax exemptions — to bring its problems to universities. Research, it argues, matters when it becomes technology and wealth and solves the country’s real problems, as Japan did by sending its students abroad to work on problems its own industry needed solved.",
+  "gallery": [
+   "g-bmn14-1.webp",
+   "g-bmn14-2.webp",
+   "g-bmn14-3.webp",
+   "g-bmn14-4.webp",
+   "g-bmn14-5.webp"
+  ]
  },
  {
   "tw": "0xd5fdaa5",

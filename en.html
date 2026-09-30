@@ -342,6 +342,25 @@ nav .wrap{justify-content:center;}
   background:rgba(196,85,31,.92); box-shadow:0 8px 24px -6px rgba(0,0,0,.6);}
 .m-pbtn::after{content:''; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%);
   border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #fff;}
+/* ===== v3.8 — گالری تصاویر رسانه ===== */
+.m-gal{margin-top:14px;}
+.m-gal-h{font-size:13px; font-weight:700; color:var(--muted); margin-bottom:8px;}
+.m-gal-g{display:grid; grid-template-columns:repeat(5,1fr); gap:6px;}
+.m-gal-g button{padding:0; border:0; border-radius:8px; overflow:hidden; cursor:pointer; aspect-ratio:1; background:#1A1D20;}
+.m-gal-g img{width:100%; height:100%; object-fit:cover; display:block; transition:.2s;}
+.m-gal-g button:hover img{filter:brightness(.8);}
+.m-gal-g button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.m-lb{position:fixed; inset:0; z-index:210; background:rgba(15,17,19,.92); display:none; align-items:center; justify-content:center; padding:56px 64px;}
+.m-lb.show{display:flex;}
+.m-lb img{max-width:100%; max-height:100%; object-fit:contain; border-radius:8px; box-shadow:0 20px 50px -10px rgba(0,0,0,.6);}
+.m-lb button{position:absolute; border:0; background:rgba(255,255,255,.12); color:#fff; cursor:pointer; border-radius:50%; width:46px; height:46px; font-size:26px; line-height:46px; padding:0;}
+.m-lb button:hover{background:rgba(255,255,255,.24);}
+.m-lb .lb-x{top:14px; inset-inline-end:14px;}
+.m-lb .lb-p{top:50%; margin-top:-23px; inset-inline-start:10px;}
+.m-lb .lb-n{top:50%; margin-top:-23px; inset-inline-end:10px;}
+.m-lb .lb-c{position:absolute; bottom:16px; left:0; right:0; text-align:center; color:#fff; font-size:13px; opacity:.8;}
+@media(max-width:560px){ .m-lb{padding:56px 8px;} .m-lb .lb-p,.m-lb .lb-n{top:auto; bottom:6px; margin-top:0;} }
+
 @media(max-width:860px){ nav .wrap{flex-direction:row!important; align-items:center;} .menu{flex:1; min-width:0;} .nav-logo{width:34px;height:34px;} .nav-logo img{width:34px;height:34px;} }
 
 /* ===== v3.4 ===== */
@@ -661,6 +680,39 @@ const PROJECTS = [{"n": "01", "title": "Postal Sorting Robots", "year": "2021 �
   function q(s){ return String(s).replace(/"/g,'&quot;'); }
   function src(m){ return m.tw ? 'https://telewebion.net/embed/episode/'+encodeURIComponent(m.tw)
                                 : 'https://www.aparat.com/video/video/embed/videohash/'+encodeURIComponent(m.aparat)+'/vt/frame'; }
+  var lb, lbL=[], lbI=0;
+  function lbShow(i){ lbI=(i+lbL.length)%lbL.length; var im=lb.querySelector('img'); im.src=lbL[lbI];
+    lb.querySelector('.lb-c').textContent=fmt(lbI+1)+' / '+fmt(lbL.length); }
+  function fmt(n){ return L==='en'?String(n):String(n).replace(/\d/g,function(d){return '۰۱۲۳۴۵۶۷۸۹'[d];}); }
+  function lbOpen(list,i){
+    if(!lb){
+      lb=document.createElement('div'); lb.className='m-lb'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true');
+      lb.innerHTML='<img alt=""><button type="button" class="lb-x" aria-label="'+(L==='en'?'Close':'بستن')+'">×</button>'
+        +'<button type="button" class="lb-p" aria-label="'+(L==='en'?'Previous':'قبلی')+'">'+(L==='en'?'‹':'›')+'</button>'
+        +'<button type="button" class="lb-n" aria-label="'+(L==='en'?'Next':'بعدی')+'">'+(L==='en'?'›':'‹')+'</button><div class="lb-c"></div>';
+      lb.onclick=function(e){ if(e.target===lb) lbClose(); };
+      lb.querySelector('.lb-x').onclick=lbClose;
+      lb.querySelector('.lb-p').onclick=function(){ lbShow(lbI-1); };
+      lb.querySelector('.lb-n').onclick=function(){ lbShow(lbI+1); };
+      document.addEventListener('keydown',function(e){
+        if(!lb.classList.contains('show')) return;
+        if(e.key==='Escape') lbClose();
+        else if(e.key==='ArrowRight') lbShow(lbI+(L==='en'?1:-1));
+        else if(e.key==='ArrowLeft') lbShow(lbI+(L==='en'?-1:1));
+      });
+      document.body.appendChild(lb);
+    }
+    lbL=list; lbShow(i); lb.classList.add('show'); document.body.style.overflow='hidden'; lb.querySelector('.lb-x').focus();
+  }
+  function lbClose(){ lb.classList.remove('show'); document.body.style.overflow=''; }
+  function addGal(el,m){
+    if(!m.gallery||!m.gallery.length) return;
+    var d=document.createElement('div'); d.className='m-gal';
+    d.innerHTML='<div class="m-gal-h">'+(L==='en'?'Photo gallery':'گالری تصاویر')+' ('+fmt(m.gallery.length)+')</div><div class="m-gal-g">'
+      +m.gallery.map(function(s,i){ return '<button type="button" aria-label="'+q((L==='en'?'Photo ':'تصویر ')+fmt(i+1))+'"><img src="'+s.replace(/\.(\w+)$/,'-t.$1')+'" alt="" loading="lazy"></button>'; }).join('')+'</div>';
+    d.querySelectorAll('button').forEach(function(b,i){ b.onclick=function(){ lbOpen(m.gallery,i); }; });
+    el.querySelector('.m-bd').appendChild(d);
+  }
   M.slice().sort(function(a,b){ return (b.d||'').localeCompare(a.d||''); }).forEach(function(m){
     var el=document.createElement('div'); el.className='m-card';
     var meta='<div class="m-meta">'+[t(m,'source'),t(m,'date')].filter(Boolean).join(' · ')+'</div>'+(t(m,'desc')?'<p class="m-desc">'+t(m,'desc')+'</p>':'');
@@ -672,7 +724,7 @@ const PROJECTS = [{"n": "01", "title": "Postal Sorting Robots", "year": "2021 �
           +'<img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540"><span class="m-pbtn"></span>'
           +'<span class="m-ext">'+(L==='en'?'Watch on Telewebion ↗':'تماشا در تلوبیون ↗')+'</span></a></div>'
           +'<div class="m-bd"><h3>'+t(m,'title')+'</h3>'+meta+more+'</div>';
-        g.appendChild(el); return;
+        addGal(el,m); g.appendChild(el); return;
       }
       el.innerHTML='<div class="m-vid">'+(m.poster
           ? '<button type="button" class="m-play" aria-label="'+q((L==='en'?'Play: ':'پخش: ')+t(m,'title'))+'"><img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540"><span class="m-pbtn"></span></button>'
@@ -689,11 +741,12 @@ const PROJECTS = [{"n": "01", "title": "Postal Sorting Robots", "year": "2021 �
     } else if(m.poster){
       el.innerHTML='<div class="m-vid"><a class="m-play" href="'+m.url+'" target="_blank" rel="noopener" aria-label="'+q((L==='en'?'Read: ':'مطالعه: ')+t(m,'title'))+'">'
         +'<img src="'+m.poster+'" alt="" loading="lazy" width="960" height="540">'
-        +'<span class="m-ext">'+(L==='en'?'Read the article ↗':'مطالعه‌ی خبر ↗')+'</span></a></div>'
+        +'<span class="m-ext">'+(t(m,'cta')||(L==='en'?'Read the article ↗':'مطالعه‌ی خبر ↗'))+'</span></a></div>'
         +'<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+'</a></h3>'+meta+more+'</div>';
     } else {
       el.innerHTML='<div class="m-bd"><h3><a class="m-title" href="'+m.url+'" target="_blank" rel="noopener">'+t(m,'title')+' ↗</a></h3>'+meta+more+'</div>';
     }
+    addGal(el,m);
     g.appendChild(el);
   });
 })();
