@@ -53,6 +53,19 @@ window.MEDIA = [
   "d": "2026-08-25"
  },
  {
+  "d": "2025-02-23",
+  "aparat": "mymgyq5",
+  "poster": "media-khwarizmi26.jpg",
+  "title_fa": "ربات‌های جداساز مرسولات پستی در بیست‌وششمین جشنواره‌ی جوان خوارزمی",
+  "title_en": "Postal Sorting Robots at the 26th Khwarizmi Youth Award",
+  "source_fa": "سازمان پژوهش‌های علمی و صنعتی ایران",
+  "source_en": "Iranian Research Organization for Science and Technology (IROST)",
+  "date_fa": "۵ اسفند ۱۴۰۳",
+  "date_en": "23 Feb 2025",
+  "desc_fa": "ویدیویی که در مراسم بیست‌وششمین جشنواره‌ی جوان خوارزمی، با حضور رئیس‌جمهور، به نمایش درآمد؛ طرحی که رتبه‌ی دوم بخش طرح‌های کاربردی را کسب کرد. حسن نصیری خونساری، طراح مکانیک نسل‌های اول تا سوم، در آن بهبودهای نسل سوم را توضیح می‌دهد: افزایش سرعت از ۱٫۱ به ۱٫۸ متر بر ثانیه، کاهش وزن از حدود ۳۰ به ۱۰ کیلوگرم، کاهش ابعاد از ۷۰×۷۰ به ۵۵×۵۵ سانتی‌متر و ساختار دوطبقه.",
+  "desc_en": "A video screened at the 26th Khwarizmi Youth Award ceremony in the presence of the President, where the project won 2nd place in the applied designs category. Hassan Nasiri Khonsari, mechanical designer of generations one to three, explains the improvements in the third generation: speed raised from 1.1 to 1.8 m/s, weight cut from about 30 to 10 kg, footprint reduced from 70×70 to 55×55 cm, and a two-level structure."
+ },
+ {
   "d": "2024-10-02",
   "url": "https://openaccess.ir/c/bmn14/paper_114387",
   "poster": "media-bmn14.jpg",

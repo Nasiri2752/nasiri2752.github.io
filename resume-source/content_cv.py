@@ -16,7 +16,7 @@ T = {
   h=dict(summary="Summary", exp="Experience", honors="Honors &amp; Awards", proj="Selected Projects",
          earlier="Earlier Projects", edu="Education", pub="Publications", skills="Skills",
          lang="Languages", media="Media", comps="Student Competitions"),
-  footer="Hassan Nasiri Khonsari — Résumé", updated="Updated Sep 2026 · v1.5",
+  footer="Hassan Nasiri Khonsari — Résumé", updated="Updated Sep 2026 · v1.6",
   summary="Mechanical and mechatronics engineer with an MSc in Applied Design from Sharif University of Technology. "
           "I design industrial machines and robots and follow them through fabrication, assembly and commissioning — "
           "from postal sorting robots in national service to medical test equipment, industrial CNC machines and 3D printers.",
@@ -30,7 +30,7 @@ T = {
   h=dict(summary="خلاصه", exp="سوابق کاری", honors="افتخارات", proj="پروژه‌های منتخب",
          earlier="پروژه‌های پیشین", edu="تحصیلات", pub="انتشارات", skills="مهارت‌ها",
          lang="زبان‌ها", media="رسانه", comps="مسابقه‌های دانشجویی"),
-  footer="رزومه‌ی حسن نصیری خونساری", updated="به‌روزرسانی: مهر ۱۴۰۵ · نسخه‌ی ۱٫۵",
+  footer="رزومه‌ی حسن نصیری خونساری", updated="به‌روزرسانی: مهر ۱۴۰۵ · نسخه‌ی ۱٫۶",
   summary="مهندس مکانیک و مکاترونیک، دانش‌آموخته‌ی کارشناسی ارشد طراحی کاربردی از دانشگاه صنعتی شریف. "
           "ماشین‌ها و ربات‌های صنعتی را طراحی می‌کنم و ساخت، مونتاژ و راه‌اندازی آن‌ها را هم پیگیری می‌کنم؛ "
           "از ربات‌های سورتر پستی که در شبکه‌ی ملی پست به کار گرفته شده‌اند تا تجهیزات آزمون پزشکی، CNC صنعتی و پرینترهای سه‌بعدی.",
@@ -238,6 +238,8 @@ MEDIA = [
       fa=("تجلیل از سه برگزیده جایزه البرز در دانشگاه صنعتی شریف", "دانشگاه صنعتی شریف · ۳۰ شهریور ۱۴۰۵"), url="https://www.sharif.ir/fa/web/news/w/%D8%AA%D8%AC%D9%84%DB%8C%D9%84-%D8%A7%D8%B2-%D8%B3%D9%87-%D8%A8%D8%B1%DA%AF%D8%B2%DB%8C%D8%AF%D9%87-%D8%AC%D8%A7%DB%8C%D8%B2%D9%87-%D8%A7%D9%84%D8%A8%D8%B1%D8%B2-%D8%AF%D8%B1-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%B5%D9%86%D8%B9%D8%AA%DB%8C-%D8%B4"),
  dict(qr="v-alborz", en=("64th Alborz Prize ceremony", "Alborz Foundation · 25 Aug 2026"),
       fa=("مراسم شصت‌وچهارمین جایزه‌ی البرز", "بنیاد البرز · ۳ شهریور ۱۴۰۵"), url="https://www.aparat.com/v/xdw0223"),
+ dict(qr="v-khwarizmi26", en=("Postal Sorting Robots at the 26th Khwarizmi Youth Award", "Iranian Research Organization for Science and Technology (IROST) · 23 Feb 2025"),
+      fa=("ربات‌های جداساز مرسولات پستی در بیست‌وششمین جشنواره‌ی جوان خوارزمی", "سازمان پژوهش‌های علمی و صنعتی ایران · ۵ اسفند ۱۴۰۳"), url="https://www.aparat.com/v/mymgyq5"),
  dict(qr="n-bmn14", en=("Iran on the Path of Progress: Linking Universities and Industry", "Paper, 14th National Elites Conference · 2 Oct 2024"),
       fa=("ایران در مسیر پیشرفت؛ پیوند دانشگاه و صنعت", "مقاله‌ی چهاردهمین همایش ملی نخبگان · ۱۱ مهر ۱۴۰۳"), url="https://openaccess.ir/c/bmn14/paper_114387"),
  dict(qr="v-ofogh", en=("Documentary: Hassan Nasiri Khonsari", "Ofogh TV, “Tazeh Nafas” · aired 5–6 Jun 2024"),
