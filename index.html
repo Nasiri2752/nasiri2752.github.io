@@ -2,6 +2,31 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6RH63PTDCY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6RH63PTDCY');
+  /* آمار کلیک‌ها — دانلود فایل‌ها و لینک‌های بیرونی را «Enhanced measurement» خود گوگل ثبت می‌کند */
+  window.track = function(name, params){ try{ gtag('event', name, params || {}); }catch(e){} };
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a,button'); if(!a) return;
+    var card = a.closest('.m-card');
+    if(card){
+      var h = card.querySelector('h3');
+      var act = a.closest('.m-gal') ? 'gallery' : a.classList.contains('m-more') ? 'more' : a.tagName === 'BUTTON' ? 'play' : 'open';
+      track('media_click', {label: h ? h.textContent.replace(/\s*↗\s*$/, '').trim() : '', action: act});
+      return;
+    }
+    var href = a.getAttribute('href') || '';
+    if(a.classList.contains('lang-sw')) track('lang_switch', {label: href});
+    else if(href.indexOf('tel:') === 0) track('contact_click', {label: 'phone'});
+    else if(href.indexOf('mailto:') === 0) track('contact_click', {label: 'email'});
+    else if(href.charAt(0) === '#' && href.length > 1) track('nav_click', {label: href.slice(1), place: a.closest('.menu') ? 'menu' : 'page'});
+  }, true);
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حسن نصیری خونساری — مهندس مکانیک و مکاترونیک</title>
 <!-- nasiri site v3.7 -->
@@ -594,6 +619,7 @@ a.m-play{display:block;}
           headers: { "Accept": "application/json" }
         });
         if(res.ok){
+          if(window.track) track('contact_form_sent');
           cform.reset();
           status.textContent = "پیام شما ارسال شد. به‌زودی پاسخ می‌دهم.";
           status.className = "cf-status ok";
@@ -649,6 +675,7 @@ const PROJECTS = [{"n": "۰۱", "title": "ربات‌های سورتر پستی"
     document.querySelectorAll('#pm-thumbs button').forEach((b,j)=>b.classList.toggle('on',j===i));
   }
   window.openProj = function(p){
+    if(window.track) track('project_open', {label: p.title});
     const th = document.getElementById('pm-thumbs');
     th.innerHTML = p.imgs.length>1 ? p.imgs.map((im,i)=>'<button type="button" aria-label="'+esc(im.cap||('تصویر '+(i+1)))+'"><img src="'+im.src.replace('.webp','-t.webp')+'" alt=""></button>').join('') : '';
     th.querySelectorAll('button').forEach((b,i)=>b.onclick=()=>show(p,i));
