@@ -530,9 +530,23 @@ def build_project(p, i, L):
         gal = f'<div class="pp-ph">{svg(ICON["image"], 64)}<span>{u["no_photo"]}</span></div>'
     vids = ""
     if p.get("videos"):
-        vids = (f'<section class="block soft"><div class="wrap">{head_block(u["videos"], d["title"])}<div class="vid-grid">' + "".join(
-            f'<div><div class="vid"><iframe src="https://www.aparat.com/video/video/embed/videohash/{esc(v["aparat"])}/vt/frame" title="{esc(v[L])}" loading="lazy" allowfullscreen></iframe></div><div class="vid-t">{v[L]}</div></div>'
-            for v in p["videos"]) + "</div></div></section>")
+        def vid_html(v):
+            if v.get("file"):
+                return (f'<div><div class="vid"><video controls preload="none" playsinline poster="/{v["poster"]}" data-id="{esc(v["id"])}">'
+                        f'<source src="/{v["file"]}" type="video/mp4"></video></div><div class="vid-t">{v[L]}</div></div>')
+            return (f'<div><div class="vid"><iframe src="https://www.aparat.com/video/video/embed/videohash/{esc(v["aparat"])}/vt/frame" '
+                    f'title="{esc(v[L])}" loading="lazy" allowfullscreen></iframe></div><div class="vid-t">{v[L]}</div></div>')
+        one = " one" if len(p["videos"]) == 1 else ""
+        vids = (f'<section class="block soft"><div class="wrap">{head_block(u["videos"], d["title"])}<div class="vid-grid{one}">'
+                + "".join(vid_html(v) for v in p["videos"]) + "</div></div></section>")
+        for v in p["videos"]:
+            vo = {"@type": "VideoObject", "name": v[L], "description": v.get("desc_" + L, v[L]), "uploadDate": v.get("date", p["date"]),
+                  "creator": {"@id": PERSON_ID}, "about": {"@id": absu(path) + "#work"}}
+            if v.get("file"):
+                vo.update(contentUrl=BASE + "/" + v["file"], thumbnailUrl=BASE + "/" + v["poster"], duration=v.get("duration", ""))
+            else:
+                vo.update(embedUrl="https://www.aparat.com/video/video/embed/videohash/" + v["aparat"] + "/vt/frame", url="https://www.aparat.com/v/" + v["aparat"])
+            nodes.append({k: x for k, x in vo.items() if x})
     facts = "".join(f"<tr><th>{k}</th><td>{v}</td></tr>" for k, v in d["facts"])
     awards = ("".join(f"<li>{a}</li>" for a in d["awards"]))
     rel = [m for m in MEDIA if p["slug"] in m.get("projects", [])]
@@ -731,7 +745,7 @@ def check():
         s = open(out_path(pth), encoding="utf-8").read()
         for ch, n in bad.items():
             assert ch not in s, f"{pth}: forbidden char {n}"
-        for ref in re.findall(r'(?:src|href|data-full)="(/[^"#?]*)"', s):
+        for ref in re.findall(r'(?:src|href|data-full|poster)="(/[^"#?]*)"', s):
             if ref.endswith("/") or ref.startswith("//"): continue
             assert os.path.exists(os.path.join(ROOT, ref.lstrip("/"))), f"{pth}: missing {ref}"
 

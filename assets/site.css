@@ -468,3 +468,5 @@ footer{padding:34px 24px 26px;}
 .btns.center{justify-content:center;}
 .hero .btns .btn-link{color:#C9CDD2; font-weight:600; font-size:14px; align-self:center; padding:0 6px; border-bottom:1px dashed rgba(255,255,255,.35);}
 .stat .n{direction:ltr; unicode-bidi:isolate;}
+.vid-grid.one{grid-template-columns:1fr; max-width:900px; margin:0 auto;}
+.vid video{position:absolute; inset:0; width:100%; height:100%; background:#000;}

@@ -32,6 +32,12 @@
     else if(href.charAt(0) === '#' && href.length > 1) track('nav_click', {label: href.slice(1), place: 'page'});
   }, true);
 
+  /* آمار پخش ویدیوهای خود سایت */
+  document.querySelectorAll('video[data-id]').forEach(function(v){
+    var sent = false;
+    v.addEventListener('play', function(){ if(!sent){ sent = true; track('video_play', {label: v.getAttribute('data-id')}); } });
+  });
+
   /* نمایش تدریجی بخش‌ها */
   if('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(es){
