@@ -1,0 +1,44 @@
+# Hassan Nasiri Khonsari (حسن نصیری خونساری)
+
+> Iranian mechanical and mechatronics design engineer (Sharif University of Technology alumnus, Alborz Prize laureate); not to be confused with the singer Hassan Nasiri. He designs custom machinery and industrial robots and follows them through fabrication, assembly and commissioning; he also offers quality-controlled batch production of industrial parts and consulting. Based in Tehran, Iran.
+
+> مهندس طراحی مکانیک و مکاترونیک، دانش‌آموخته‌ی دانشگاه صنعتی شریف و برگزیده‌ی جایزه‌ی البرز؛ این شخص با حسن نصیری، خواننده، متفاوت است.
+
+## Key facts
+
+- MSc in Mechanical Engineering (Applied Design), Sharif University of Technology (supervisor: Prof. Mohammad Durali); BSc, Iran University of Science and Technology.
+- Led the mechanical design of Iran National Post's postal sorting robots (Tensor Intelligent Machines) across three generations: 80 robots in Tehran and Kermanshah; third generation produced as a 200-unit series (1.8 m/s, ~10 kg, 55×55 cm).
+- Built a 6-DOF knee prosthesis constraint and stability test apparatus per ASTM F1223 — the first of its kind in Iran.
+- Awards: Laureate, 64th Alborz Prize (2026); 2nd Place, 26th Khwarizmi Youth Award (2025); 2nd Place, 24th Khwarizmi Youth Award (2023).
+- Publication: “Frictional behavior between bone and additively manufactured Ti6Al4V implants is affected by bone density and surface texture under varying loads”, Scientific Reports, 2025 (https://doi.org/10.1038/s41598-025-25586-0).
+- Current role: Senior Mechanical Engineer at Karun HiTech Solutions (8,000+ industrial parts delivered).
+- Open to: design-and-build projects, multi-robot mobile fleets, batch production of parts with QC, automation/PLC, test rigs, career and award-application consulting. Not seeking employment.
+
+## Pages
+
+- [Home (English)](https://nasiri2752.github.io/en/): overview
+- [Services](https://nasiri2752.github.io/en/services.html): what he offers, process and FAQ
+- [Projects](https://nasiri2752.github.io/en/projects.html): all design-and-build projects
+- [About](https://nasiri2752.github.io/en/about.html): experience, education, awards, publication, skills
+- [Media](https://nasiri2752.github.io/en/media.html): TV interviews, documentary and news
+- [Persian home / صفحه‌ی اصلی فارسی](https://nasiri2752.github.io/)
+
+## Projects
+
+- [Postal Sorting Robots](https://nasiri2752.github.io/en/projects/postal-sorting-robots.html): Iran's first postal sorting robot of its type: 80 robots in Tehran and Kermanshah, and a 200-unit third generation.
+- [Knee Prosthesis Constraint and Stability Test Apparatus](https://nasiri2752.github.io/en/projects/knee-prosthesis-test-rig.html): Six-DOF testing of total knee replacements per ASTM F1223 — the first apparatus of its kind in Iran.
+- [Industrial FDM 3D Printers](https://nasiri2752.github.io/en/projects/industrial-3d-printers.html): Five machines, from 200×200×150 mm up to 500×500×400 mm with ball screws and industrial linear rails.
+- [Dual-Purpose Industrial CNC](https://nasiri2752.github.io/en/projects/dual-purpose-cnc.html): A CNC for wood and light metals that becomes a large 3D printer with a head change.
+- [Waiter Robots](https://nasiri2752.github.io/en/projects/waiter-robots.html): A fleet of seven waiter robots — Iran's first waiter robot of its type.
+- [Kach and Karnak Mobile Robots (LeaMech)](https://nasiri2752.github.io/en/projects/leamech-mobile-robots.html): A platform for mobile service robots: the ROS-based Kach and the omnidirectional, mecanum-wheeled Karnak.
+- [DMD Powder Feeder](https://nasiri2752.github.io/en/projects/dmd-powder-feeder.html): A powder feeder for laser direct metal deposition, controlled from 1 to 100 g/min.
+- [Cable-Driven Drawing Robot](https://nasiri2752.github.io/en/projects/cable-drawing-robot.html): A cable robot that turns any photo into a line drawing and draws it on canvas.
+
+## Contact
+
+- Email: Nasiri2752@Gmail.com
+- Phone: +98 936 804 7725
+- LinkedIn: https://www.linkedin.com/in/hassan-nasiri-khonsari-44bb49198/
+- Telegram: https://t.me/Hnkh94
+- Bale: https://ble.ir/hnkh94
+- Instagram: https://www.instagram.com/Nasiri_2752/

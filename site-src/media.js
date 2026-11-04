@@ -1,9 +1,11 @@
-/* فهرست رسانه‌ها — برای هر دو نسخه‌ی فارسی و انگلیسی سایت.
+/* فهرست رسانه‌ها — منبع داده‌ی صفحه‌ی رسانه، صفحه‌ی اصلی و صفحه‌ی پروژه‌ها (فارسی و انگلیسی).
+   بعد از هر تغییر: python3 site-src/build_site.py
    ویدیوی تلوبیون:  tw: "0x…"        (بخش آخر لینک telewebion.net/episode/0x…)
    ویدیوی آپارات:   aparat: "xxxx"    (بخش آخر لینک aparat.com/v/xxxx)
    poster: نام فایل فریم انتخابی که قبل از پخش نمایش داده می‌شود
    خبر متنی:        url: "https://…"
    فیلدهای متنی: title_fa/en ، source_fa/en ، date_fa/en ، desc_fa/en ، more_url + more_fa/en (اختیاری)
+   id: شناسه‌ی ثابت انگلیسی (برای آمار و لینک‌ها)؛ projects: شناسه‌ی پروژه‌های مرتبط (slug) تا کارت در صفحه‌ی آن پروژه هم بیاید
    d: تاریخ میلادی به شکل YYYY-MM-DD؛ کارت‌ها خودکار از جدیدترین به قدیمی‌ترین مرتب می‌شوند
    cta_fa/en: متن دکمه‌ی روی تصویر خبر متنی (اختیاری؛ پیش‌فرض «مطالعه‌ی خبر»)
    gallery: فهرست عکس‌های گالری (اختیاری)؛ برای هر عکس یک نسخه‌ی کوچک با پسوند -t هم لازم است
@@ -11,6 +13,10 @@
 */
 window.MEDIA = [
  {
+  "id": "sharif-interview",
+  "projects": [
+   "knee-prosthesis-test-rig"
+  ],
   "d": "2026-09-26",
   "url": "https://news.sharif.ir/fa/article/76256078",
   "title_fa": "از طراحی تا ساخت؛ روایت پژوهشگری که دستگاه آزمون پروتز زانو را در کشور ساخت",
@@ -27,6 +33,10 @@ window.MEDIA = [
   "poster": "media-sharif.jpg"
  },
  {
+  "id": "sharif-alborz-honor",
+  "projects": [
+   "knee-prosthesis-test-rig"
+  ],
   "d": "2026-09-21",
   "poster": "media-honor.jpg",
   "url": "https://www.sharif.ir/fa/web/news/w/%D8%AA%D8%AC%D9%84%DB%8C%D9%84-%D8%A7%D8%B2-%D8%B3%D9%87-%D8%A8%D8%B1%DA%AF%D8%B2%DB%8C%D8%AF%D9%87-%D8%AC%D8%A7%DB%8C%D8%B2%D9%87-%D8%A7%D9%84%D8%A8%D8%B1%D8%B2-%D8%AF%D8%B1-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%B5%D9%86%D8%B9%D8%AA%DB%8C-%D8%B4",
@@ -40,6 +50,10 @@ window.MEDIA = [
   "desc_en": "Hassan Nasiri Khonsari, a Sharif University of Technology graduate named among the laureates of the 64th Alborz Prize in the Technologists & Inventors category, was honored at a meeting of the university’s board and presented with a certificate of appreciation and a silver medal minted by Sharif University."
  },
  {
+  "id": "alborz-64-ceremony",
+  "projects": [
+   "knee-prosthesis-test-rig"
+  ],
   "aparat": "xdw0223",
   "poster": "media-alborz.jpg",
   "title_fa": "مراسم شصت‌وچهارمین جایزه‌ی البرز",
@@ -53,6 +67,10 @@ window.MEDIA = [
   "d": "2026-08-25"
  },
  {
+  "id": "khwarizmi-26-sorting-robots",
+  "projects": [
+   "postal-sorting-robots"
+  ],
   "d": "2025-02-23",
   "aparat": "mymgyq5",
   "poster": "media-khwarizmi26.jpg",
@@ -66,6 +84,8 @@ window.MEDIA = [
   "desc_en": "A video screened at the 26th Khwarizmi Youth Award ceremony in the presence of the President, where the project won 2nd place in the applied designs category. Hassan Nasiri Khonsari, mechanical designer of generations one to three, explains the improvements in the third generation: speed raised from 1.1 to 1.8 m/s, weight cut from about 30 to 10 kg, footprint reduced from 70×70 to 55×55 cm, and a two-level structure."
  },
  {
+  "id": "elites-conference-paper",
+  "projects": [],
   "d": "2024-10-02",
   "url": "https://openaccess.ir/c/bmn14/paper_114387",
   "poster": "media-bmn14.jpg",
@@ -91,6 +111,13 @@ window.MEDIA = [
   ]
  },
  {
+  "id": "ofogh-documentary",
+  "projects": [
+   "postal-sorting-robots",
+   "knee-prosthesis-test-rig",
+   "industrial-3d-printers",
+   "dual-purpose-cnc"
+  ],
   "tw": "0xd5fdaa5",
   "poster": "media-ofogh.jpg",
   "title_fa": "مستند زندگی حسن نصیری خونساری",
@@ -104,6 +131,8 @@ window.MEDIA = [
   "d": "2024-06-05"
  },
  {
+  "id": "amoozesh-interview",
+  "projects": [],
   "tw": "0xac965d7",
   "poster": "media-amoozesh.jpg",
   "title_fa": "گفت‌وگو در برنامه‌ی «و اما امروز»",
@@ -117,6 +146,10 @@ window.MEDIA = [
   "d": "2024-01-13"
  },
  {
+  "id": "irna-interview",
+  "projects": [
+   "knee-prosthesis-test-rig"
+  ],
   "url": "https://www.irna.ir/news/85069178/",
   "title_fa": "پروژه‌های دانشجویان باید برگرفته از نیازهای صنعتی باشد",
   "title_en": "Student projects should be drawn from industry needs",
@@ -133,6 +166,10 @@ window.MEDIA = [
   "desc_en": "An interview with IRNA after the Khwarizmi Youth Award, on linking student projects to real industry needs and the experience of building the knee prosthesis constraint and stability test apparatus."
  },
  {
+  "id": "tv1-iran-emrooz",
+  "projects": [
+   "knee-prosthesis-test-rig"
+  ],
   "tw": "0x5cc2d6f",
   "poster": "media-ch1.jpg",
   "title_fa": "گفت‌وگو در برنامه‌ی «ایران امروز»",
@@ -146,6 +183,10 @@ window.MEDIA = [
   "desc_en": "A live interview on IRIB TV1’s “Iran Emrooz” after winning 2nd place at the 24th Khwarizmi Youth Award, on his studies and his design-and-build projects."
  },
  {
+  "id": "irinn-special-talk",
+  "projects": [
+   "knee-prosthesis-test-rig"
+  ],
   "tw": "0x59748e1",
   "poster": "media-ch6.jpg",
   "title_fa": "گفت‌وگوی ویژه‌ی خبری: حمایت از برگزیدگان جشنواره‌ی خوارزمی",
