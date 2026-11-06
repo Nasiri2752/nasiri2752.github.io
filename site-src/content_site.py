@@ -4,8 +4,8 @@
 قواعد نگارش: «ی» میانجی با نیم‌فاصله (پروژه‌ی، نه پروژهٔ)، «ی» و «ک» فارسی، ارقام فارسی در متن فارسی.
 """
 
-# آدرس پایه‌ی سایت. بعد از وصل شدن دامنه‌ی hassannasiri.ir، این را به "https://hassannasiri.ir" تغییر بده و دوباره بساز.
-BASE = "https://nasiri2752.github.io"
+# آدرس پایه‌ی سایت (دامنه‌ی اصلی؛ nasiri2752.github.io خودکار به آن منتقل می‌شود).
+BASE = "https://hassannasiri.ir"
 
 GA_ID = "G-6RH63PTDCY"
 FORMSPREE = "https://formspree.io/f/mrevzvga"
