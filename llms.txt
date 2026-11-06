@@ -16,23 +16,23 @@
 
 ## Pages
 
-- [Home (English)](https://nasiri2752.github.io/en/): overview
-- [Services](https://nasiri2752.github.io/en/services.html): what he offers, process and FAQ
-- [Projects](https://nasiri2752.github.io/en/projects.html): all design-and-build projects
-- [About](https://nasiri2752.github.io/en/about.html): experience, education, awards, publication, skills
-- [Media](https://nasiri2752.github.io/en/media.html): TV interviews, documentary and news
-- [Persian home / صفحه‌ی اصلی فارسی](https://nasiri2752.github.io/)
+- [Home (English)](https://hassannasiri.ir/en/): overview
+- [Services](https://hassannasiri.ir/en/services.html): what he offers, process and FAQ
+- [Projects](https://hassannasiri.ir/en/projects.html): all design-and-build projects
+- [About](https://hassannasiri.ir/en/about.html): experience, education, awards, publication, skills
+- [Media](https://hassannasiri.ir/en/media.html): TV interviews, documentary and news
+- [Persian home / صفحه‌ی اصلی فارسی](https://hassannasiri.ir/)
 
 ## Projects
 
-- [Postal Sorting Robots](https://nasiri2752.github.io/en/projects/postal-sorting-robots.html): Iran's first postal sorting robot of its type: 80 robots in Tehran and Kermanshah, and a 200-unit third generation.
-- [Knee Prosthesis Constraint and Stability Test Apparatus](https://nasiri2752.github.io/en/projects/knee-prosthesis-test-rig.html): Six-DOF testing of total knee replacements per ASTM F1223 — the first apparatus of its kind in Iran.
-- [Industrial FDM 3D Printers](https://nasiri2752.github.io/en/projects/industrial-3d-printers.html): Five machines, from 200×200×150 mm up to 500×500×400 mm with ball screws and industrial linear rails.
-- [Dual-Purpose Industrial CNC](https://nasiri2752.github.io/en/projects/dual-purpose-cnc.html): A CNC for wood and light metals that becomes a large 3D printer with a head change.
-- [Waiter Robots](https://nasiri2752.github.io/en/projects/waiter-robots.html): A fleet of seven waiter robots — Iran's first waiter robot of its type.
-- [Kach and Karnak Mobile Robots (LeaMech)](https://nasiri2752.github.io/en/projects/leamech-mobile-robots.html): A platform for mobile service robots: the ROS-based Kach and the omnidirectional, mecanum-wheeled Karnak.
-- [DMD Powder Feeder](https://nasiri2752.github.io/en/projects/dmd-powder-feeder.html): A powder feeder for laser direct metal deposition, controlled from 1 to 100 g/min.
-- [Cable-Driven Drawing Robot](https://nasiri2752.github.io/en/projects/cable-drawing-robot.html): A cable robot that turns any photo into a line drawing and draws it on canvas.
+- [Postal Sorting Robots](https://hassannasiri.ir/en/projects/postal-sorting-robots.html): Iran's first postal sorting robot of its type: 80 robots in Tehran and Kermanshah, and a 200-unit third generation.
+- [Knee Prosthesis Constraint and Stability Test Apparatus](https://hassannasiri.ir/en/projects/knee-prosthesis-test-rig.html): Six-DOF testing of total knee replacements per ASTM F1223 — the first apparatus of its kind in Iran.
+- [Industrial FDM 3D Printers](https://hassannasiri.ir/en/projects/industrial-3d-printers.html): Five machines, from 200×200×150 mm up to 500×500×400 mm with ball screws and industrial linear rails.
+- [Dual-Purpose Industrial CNC](https://hassannasiri.ir/en/projects/dual-purpose-cnc.html): A CNC for wood and light metals that becomes a large 3D printer with a head change.
+- [Waiter Robots](https://hassannasiri.ir/en/projects/waiter-robots.html): A fleet of seven waiter robots — Iran's first waiter robot of its type.
+- [Kach and Karnak Mobile Robots (LeaMech)](https://hassannasiri.ir/en/projects/leamech-mobile-robots.html): A platform for mobile service robots: the ROS-based Kach and the omnidirectional, mecanum-wheeled Karnak.
+- [DMD Powder Feeder](https://hassannasiri.ir/en/projects/dmd-powder-feeder.html): A powder feeder for laser direct metal deposition, controlled from 1 to 100 g/min.
+- [Cable-Driven Drawing Robot](https://hassannasiri.ir/en/projects/cable-drawing-robot.html): A cable robot that turns any photo into a line drawing and draws it on canvas.
 
 ## Contact
 
