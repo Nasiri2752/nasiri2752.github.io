@@ -470,3 +470,7 @@ footer{padding:34px 24px 26px;}
 .stat .n{direction:ltr; unicode-bidi:isolate;}
 .vid-grid.one{grid-template-columns:1fr; max-width:900px; margin:0 auto;}
 .vid video{position:absolute; inset:0; width:100%; height:100%; background:#000;}
+/* ویدیوی عمودی (۹:۱۶) */
+.vid.v{aspect-ratio:9/16; max-width:360px; margin:0 auto;}
+.vid-item.v .vid-t{text-align:center;}
+.vid-grid{align-items:start;}

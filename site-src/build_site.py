@@ -532,7 +532,8 @@ def build_project(p, i, L):
     if p.get("videos"):
         def vid_html(v):
             if v.get("file"):
-                return (f'<div><div class="vid"><video controls preload="none" playsinline poster="/{v["poster"]}" data-id="{esc(v["id"])}">'
+                vc = " v" if v.get("vertical") else ""
+                return (f'<div class="vid-item{vc}"><div class="vid{vc}"><video controls preload="none" playsinline poster="/{v["poster"]}" data-id="{esc(v["id"])}">'
                         f'<source src="/{v["file"]}" type="video/mp4"></video></div><div class="vid-t">{v[L]}</div></div>')
             return (f'<div><div class="vid"><iframe src="https://www.aparat.com/video/video/embed/videohash/{esc(v["aparat"])}/vt/frame" '
                     f'title="{esc(v[L])}" loading="lazy" allowfullscreen></iframe></div><div class="vid-t">{v[L]}</div></div>')
