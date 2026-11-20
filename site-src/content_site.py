@@ -381,7 +381,7 @@ PROJECTS = [
    awards=["Laureate, 64th Alborz Prize", "2nd Place, 24th Khwarizmi Youth Award", "Top technological thesis, Sharif Mechanical Engineering"])),
 
  dict(slug="industrial-3d-printers", year=("۱۳۹۹ تا ۱۴۰۲", "2020 – 2023"), date="2020",
-  imgs=[("p-printer-1.webp", 1288, 952, "نسل اول — ۳۰×۳۰×۴۰ سانتی‌متر", "Generation 1 — 30×30×40 cm"), ("p-printer-2.webp", 756, 1008, "نسل دوم — ۳۰×۳۰×۴۰ سانتی‌متر", "Generation 2 — 30×30×40 cm"), ("p-printer-3.webp", 980, 1232, "نسل سوم — ۵۰×۵۰×۴۰ سانتی‌متر", "Generation 3 — 50×50×40 cm")],
+  imgs=[("p-printer-1.webp", 1288, 952, "نسل اول — ۳۰×۳۰×۴۰ سانتی‌متر", "Generation 1 — 30×30×40 cm"), ("p-printer-2.webp", 756, 1008, "نسل دوم — ۳۰×۳۰×۴۰ سانتی‌متر", "Generation 2 — 30×30×40 cm"), ("p-printer-3.webp", 980, 1232, "نسل سوم — ۵۰×۵۰×۴۰ سانتی‌متر", "Generation 3 — 50×50×40 cm"), ("p-printer-4.webp", 783, 1400, "نسل سوم در کنار سازنده‌اش", "Generation 3 next to its builder")],
   videos=[],
   fa=dict(title="پرینترهای سه‌بعدی FDM صنعتی", short="پنج دستگاه، از ۲۰۰×۲۰۰×۱۵۰ تا ۵۰۰×۵۰۰×۴۰۰ میلی‌متر با بال‌اسکرو و ریل خطی صنعتی.",
    tags=["پرینت سه‌بعدی", "طراحی مکانیزم", "الکترونیک و فرم‌ور"],
