@@ -178,6 +178,7 @@ GA = f"""<!-- Google tag (gtag.js) -->
 def head(L, title, desc, path, alt_path, nodes, og_img="/og-image.jpg", og_type="website"):
     fa_p = path if L == "fa" else alt_path
     en_p = alt_path if L == "fa" else path
+    font_css = "https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
     return f"""<!DOCTYPE html>
 <html lang="{L}" dir="{'rtl' if L == 'fa' else 'ltr'}">
 <head>
@@ -212,7 +213,8 @@ def head(L, title, desc, path, alt_path, nodes, og_img="/og-image.jpg", og_type=
 {ld_script(nodes)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{font_css}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{font_css}"></noscript>
 <link rel="stylesheet" href="/assets/site.css?v={TODAY.strftime('%Y%m%d')}">
 </head>
 <body>
