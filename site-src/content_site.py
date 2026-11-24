@@ -5,7 +5,7 @@
 """
 
 # آدرس پایه‌ی سایت (دامنه‌ی اصلی؛ nasiri2752.github.io خودکار به آن منتقل می‌شود).
-BASE = "https://hassannasiri.ir"
+BASE = "https://nasiri2752.github.io"
 
 GA_ID = "G-6RH63PTDCY"
 FORMSPREE = "https://formspree.io/f/mrevzvga"

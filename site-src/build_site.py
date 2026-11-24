@@ -686,12 +686,11 @@ def build_extras():
     for pth in PAGES:
         fa_p = pth if not pth.startswith("/en/") else alt_of[pth]
         en_p = alt_of[pth] if not pth.startswith("/en/") else pth
-        pri = "1.0" if pth in ("/", "/en/") else ("0.9" if "services" in pth or "projects.html" in pth else "0.8")
-        rows.append(f'  <url><loc>{absu(pth)}</loc><lastmod>{TODAY.isoformat()}</lastmod><priority>{pri}</priority>\n'
+        rows.append(f'  <url><loc>{absu(pth)}</loc>\n'
                     f'    <xhtml:link rel="alternate" hreflang="fa" href="{absu(fa_p)}"/><xhtml:link rel="alternate" hreflang="en" href="{absu(en_p)}"/>'
                     f'<xhtml:link rel="alternate" hreflang="x-default" href="{absu(fa_p)}"/></url>')
     for f in ("Resume.pdf", "bmn14-paper.pdf"):
-        rows.append(f"  <url><loc>{BASE}/{f}</loc><lastmod>{TODAY.isoformat()}</lastmod><priority>0.5</priority></url>")
+        rows.append(f"  <url><loc>{BASE}/{f}</loc></url>")
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
         + "\n".join(rows) + "\n</urlset>\n")
