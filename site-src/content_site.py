@@ -98,8 +98,9 @@ SERVICES_PAGE = {
  "fa": dict(
   title="خدمات و همکاری | حسن نصیری خونساری — طراحی ماشین، ربات و تولید قطعات",
   desc="طراحی و ساخت ماشین‌آلات سفارشی، ربات‌های متحرک گروهی و خدماتی، تولید تیراژی قطعات با کنترل کیفیت، اتوماسیون و PLC، تجهیزات آزمون و مشاوره‌ی مسیر شغلی و جشنواره‌ها.",
-  kk="خدمات و همکاری", h1="با هم چه کاری می‌توانیم انجام دهیم؟",
-  lead="اگر پروژه‌ی طراحی و ساخت ماشین یا ربات دارید، قطعه‌ای را در تیراژ با کیفیت قابل‌اطمینان می‌خواهید، یا فقط دوست دارید درباره‌ی مسیر شغلی، یک ایده یا آماده شدن برای یک جشنواره گپ بزنیم، خوشحال می‌شوم با هم صحبت کنیم.",
+  kk="خدمات و همکاری", h1="طراحی ماشین‌آلات، نمونه‌سازی و تولید قطعات صنعتی",
+  lead="برای طراحی یا بازطراحی یک دستگاه، نمونه‌سازی و تولید تیراژی، روی کارکرد مورد انتظار و محدودیت‌های ساخت توافق می‌کنیم. دامنه‌ی همکاری می‌تواند از بررسی فنی و نقشه‌ی ساخت تا پیگیری ساخت، کنترل کیفیت و راه‌اندازی باشد.",
+  inquire="ارسال مشخصات پروژه", prototype="نمونه‌سازی تا تولید تیراژی",
   svc_h="طراحی، ساخت و تولید", cons_h="مشاوره و گفت‌وگو",
   cons_p="بخشی از تجربه‌ای که در این سال‌ها به دست آمده، به درد کسی می‌خورد که تازه در همین مسیر است.",
   steps_h="روند همکاری",
@@ -113,8 +114,9 @@ SERVICES_PAGE = {
  "en": dict(
   title="Services | Hassan Nasiri Khonsari — Machine Design, Robotics & Parts Production",
   desc="Custom machinery design and build, multi-robot mobile fleets and service robots, quality-controlled batch production of parts, automation and PLC, test rigs, and consulting on engineering careers and award applications.",
-  kk="Services", h1="What we can do together",
-  lead="If you have a machine or robot to design and build, need parts produced in batches with reliable quality, or just want to talk about a career path, an idea, or preparing for an award — I'd be glad to talk.",
+  kk="Services", h1="Custom Machinery, Industrial Prototyping and Batch Production",
+  lead="For a new machine, a redesign, a prototype or a batch of industrial parts, we agree on the expected performance and manufacturing constraints. The scope can cover technical review and drawings through fabrication follow-up, quality control and commissioning.",
+  inquire="Send project requirements", prototype="Prototyping for batch production",
   svc_h="Design, build and production", cons_h="Consulting and conversations",
   cons_p="Part of what I've learned over these years is useful to someone just starting out on the same path.",
   steps_h="How we work",
@@ -124,6 +126,41 @@ SERVICES_PAGE = {
          ("Fabrication & quality control", "Follow-up of part fabrication and assembly, with dimensional inspection and QC."),
          ("Delivery & commissioning", "Installation, testing, commissioning and documentation.")],
   faq_h="Frequently asked questions",
+ ),
+}
+
+PROTOTYPING_PAGE = {
+ "fa": dict(
+  title="نمونه‌سازی صنعتی و بازطراحی برای تولید تیراژی | حسن نصیری خونساری",
+  desc="نمونه‌سازی مکانیکی دستگاه و محصول صنعتی، تعریف آزمون پذیرش، بازطراحی برای ساخت و مونتاژ و آماده‌سازی نقشه و کنترل کیفیت برای سری اول تولید.",
+  kk="نمونه‌سازی صنعتی", h1="نمونه‌سازی صنعتی و بازطراحی برای تولید تیراژی",
+  lead="اگر نمونه‌ای دارید که کار می‌کند ولی ساخت آن زمان‌بر است، یا پیش از سفارش تیراژی باید عملکرد یک ایده را بسنجید، می‌توان پروژه را به دو تصمیم تقسیم کرد: نمونه چه چیزی را باید ثابت کند و سری اول با چه معیارهایی باید تحویل شود.",
+  work_h="از نمونه تا سری اول تولید",
+  work=[
+   ("نمونه‌ی عملکردی", "عملکرد ضروری و شرایط آزمون را مشخص می‌کنیم؛ مثلاً بار، ظرفیت، دقت یا زمان چرخه. بر همان اساس، بخش‌هایی که برای آزمون لازم‌اند طراحی و ساخته می‌شوند."),
+   ("بازطراحی برای ساخت و مونتاژ", "قطعات دشوار یا پرهزینه، تلرانس‌های ضروری و روش مونتاژ بازبینی می‌شوند تا ساخت تکرارپذیر و بازرسی قطعه عملی باشد."),
+   ("آماده‌سازی سری اول", "بر اساس دامنه‌ی توافق‌شده، مدل و نقشه‌ی ساخت، فهرست قطعات و معیارهای پذیرش آماده می‌شوند تا بتوان سری اول را ساخت، بازرسی کرد و برای تیراژ بعدی تصمیم گرفت."),
+  ],
+  proof_h="نمونه‌های واقعی طراحی و بازطراحی",
+  intake_h="برای بررسی اولیه چه بفرستید؟",
+  intake="کارکرد مورد انتظار، وضعیت فعلی طرح یا نمونه، تعداد سری اول و زمان مورد نظر را بنویسید. اگر نقشه، عکس یا مدل دارید، در پیام اول فقط اطلاعاتی را بفرستید که امکان اشتراک آن را دارید.",
+  inquire="ارسال مشخصات پروژه",
+ ),
+ "en": dict(
+  title="Industrial Prototyping and Redesign for Batch Production | Hassan Nasiri Khonsari",
+  desc="Mechanical prototyping for industrial equipment, acceptance testing, redesign for manufacturing and assembly, and preparation of drawings and QC criteria for a first production batch.",
+  kk="Industrial prototyping", h1="Industrial Prototyping and Redesign for Batch Production",
+  lead="If a working prototype is slow to build, or an idea needs to prove its performance before a batch order, split the project into two decisions: what the prototype must demonstrate and how the first batch will be accepted.",
+  work_h="From prototype to first batch",
+  work=[
+   ("Functional prototype", "Agree on the essential performance and test conditions, such as load, throughput, accuracy or cycle time. Design and build the parts needed to run that test."),
+   ("Redesign for manufacturing and assembly", "Review difficult or expensive parts, critical tolerances and the assembly sequence so the design can be built repeatedly and inspected."),
+   ("First-batch preparation", "Depending on the agreed scope, prepare models and drawings, a parts list and acceptance criteria so the first batch can be built, inspected and used to inform the next order."),
+  ],
+  proof_h="Design and redesign case studies",
+  intake_h="What to share for an initial review",
+  intake="Describe the intended function, the current design or prototype, the first-batch quantity and your target date. If a drawing, photo or model is available, only share information you are allowed to disclose in the first message.",
+  inquire="Send project requirements",
  ),
 }
 

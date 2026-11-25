@@ -18,6 +18,7 @@
 
 - [Home (English)](https://nasiri2752.github.io/en/): overview
 - [Services](https://nasiri2752.github.io/en/services.html): what he offers, process and FAQ
+- [Industrial prototyping](https://nasiri2752.github.io/en/industrial-prototyping.html): functional prototypes, design for manufacturing and first-batch preparation
 - [Projects](https://nasiri2752.github.io/en/projects.html): all design-and-build projects
 - [About](https://nasiri2752.github.io/en/about.html): experience, education, awards, publication, skills
 - [Media](https://nasiri2752.github.io/en/media.html): TV interviews, documentary and news

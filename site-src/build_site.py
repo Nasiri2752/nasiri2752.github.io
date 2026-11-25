@@ -464,6 +464,10 @@ def build_services(L):
     faqh = "".join(f'<details class="reveal"><summary>{q}</summary><p>{a}</p></details>' for q, a in faq)
     body = page_hero(L, s["kk"], s["h1"], s["lead"], crumbs=[(u["home"], url("index", L)), (s["kk"], None)]) + f"""
 <section class="block soft" id="build"><div class="wrap">
+  <div class="btns" style="margin:0 0 32px">
+    <a class="btn btn-gold" href="#contact">{s["inquire"]}</a>
+    <a class="btn" href="{url("industrial-prototyping", L)}">{s["prototype"]}</a>
+  </div>
   {head_block(s["kk"], s["svc_h"])}
   <div class="svc-grid">{svcs}</div>
 </div></section>
@@ -478,6 +482,39 @@ def build_services(L):
 <section class="block" id="faq"><div class="wrap">
   {head_block(s["kk"], s["faq_h"])}
   <div class="faq">{faqh}</div>
+</div></section>
+"""
+    write(path, head(L, s["title"], s["desc"], path, alt, nodes) + nav(L, "services", alt) + body + contact_section(L) + footer(L))
+
+
+def build_prototyping(L):
+    s, u = PROTOTYPING_PAGE[L], UI[L]
+    path = url("industrial-prototyping", L)
+    alt = url("industrial-prototyping", "en" if L == "fa" else "fa")
+    crumbs = [(u["home"], url("index", L)), (SERVICES_PAGE[L]["kk"], url("services", L)), (s["kk"], None)]
+    nodes = [
+        person_ref(L),
+        {"@type": "Service", "@id": absu(path) + "#service", "url": absu(path),
+         "name": s["h1"], "description": s["desc"], "provider": {"@id": PERSON_ID},
+         "areaServed": {"@type": "Country", "name": "Iran"}},
+        breadcrumbs(L, [(name, href or path) for name, href in crumbs]),
+    ]
+    work = "".join(f'<div class="step"><h3>{title}</h3><p>{detail}</p></div>' for title, detail in s["work"])
+    cases = "".join(project_card(PROJ[slug], L, "prototyping") for slug in (
+        "postal-sorting-robots", "knee-prosthesis-test-rig", "dual-purpose-cnc",
+    ))
+    body = page_hero(L, s["kk"], s["h1"], s["lead"], crumbs=crumbs) + f"""
+<section class="block soft"><div class="wrap">
+  <div class="pp-cta"><div><h2>{s["intake_h"]}</h2><p>{s["intake"]}</p></div>
+    <a class="btn btn-gold" href="#contact">{s["inquire"]}</a></div>
+</div></section>
+<section class="block"><div class="wrap">
+  {head_block(s["kk"], s["work_h"])}
+  <div class="svc-grid">{work}</div>
+</div></section>
+<section class="block soft"><div class="wrap">
+  {head_block(s["kk"], s["proof_h"])}
+  <div class="p-grid">{cases}</div>
 </div></section>
 """
     write(path, head(L, s["title"], s["desc"], path, alt, nodes) + nav(L, "services", alt) + body + contact_section(L) + footer(L))
@@ -712,6 +749,7 @@ def build_extras():
              "- Open to: design-and-build projects, multi-robot mobile fleets, batch production of parts with QC, automation/PLC, test rigs, career and award-application consulting. Not seeking employment.", "",
              "## Pages", "",
              f"- [Home (English)]({BASE}/en/): overview", f"- [Services]({BASE}/en/services.html): what he offers, process and FAQ",
+             f"- [Industrial prototyping]({BASE}/en/industrial-prototyping.html): functional prototypes, design for manufacturing and first-batch preparation",
              f"- [Projects]({BASE}/en/projects.html): all design-and-build projects", f"- [About]({BASE}/en/about.html): experience, education, awards, publication, skills",
              f"- [Media]({BASE}/en/media.html): TV interviews, documentary and news", f"- [Persian home / صفحه‌ی اصلی فارسی]({BASE}/)", ""]
     lines += ["## Projects", ""] + [f"- [{p['en']['title']}]({absu(url('project', 'en', p['slug']))}): {p['en']['short']}" for p in PROJECTS] + [""]
@@ -758,7 +796,7 @@ if __name__ == "__main__":
     shutil.copy(os.path.join(SRC, "site.js"), os.path.join(ROOT, "assets", "site.js"))
     build_og_images()
     for L in LANGS:
-        build_home(L); build_services(L); build_projects_index(L); build_about(L); build_media(L)
+        build_home(L); build_services(L); build_prototyping(L); build_projects_index(L); build_about(L); build_media(L)
         for i, p in enumerate(PROJECTS): build_project(p, i, L)
     build_extras()
     check()
