@@ -374,8 +374,13 @@ PAGES = []
 def build_home(L):
     h, u = HOME[L], UI[L]
     path, alt = url("index", L), url("index", "en" if L == "fa" else "fa")
+    heading = h.get("h1", NAME[L])
+    website = {"@type": "WebSite", "@id": BASE + "/#website", "url": BASE + "/", "name": NAME[L],
+               "inLanguage": ["fa", "en"], "publisher": {"@id": PERSON_ID}}
+    if heading != NAME[L]:
+        website["alternateName"] = heading
     nodes = [person_full(L),
-             {"@type": "WebSite", "@id": BASE + "/#website", "url": BASE + "/", "name": NAME[L], "inLanguage": ["fa", "en"], "publisher": {"@id": PERSON_ID}},
+             website,
              {"@type": "ProfilePage", "@id": absu(path) + "#page", "url": absu(path), "name": h["title"], "inLanguage": L,
               "mainEntity": {"@id": PERSON_ID}, "isPartOf": {"@id": BASE + "/#website"}, "dateModified": TODAY.isoformat()}]
     stats = "".join(f'<div class="stat reveal"><div class="n">{n}</div><div class="l">{l}</div></div>' for n, l in h["stats"])
@@ -399,7 +404,7 @@ def build_home(L):
     </div>
     <div class="intro">
     <span class="eyebrow">{h["eyebrow"]}</span>
-    <h1>{NAME[L]}</h1>
+    <h1>{heading}</h1>
     <p class="headline">{h["headline"]}</p>
     <p class="lead">{h["lead"]}</p>
     <div class="btns">
