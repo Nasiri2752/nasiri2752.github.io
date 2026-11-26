@@ -269,8 +269,10 @@ HONORS_PHOTO = {
 }
 
 HONORS = [
- dict(icon="medal", top=True, fa=("برگزیده‌ی شصت‌وچهارمین جایزه‌ی البرز", "یکی از ۱۲ برگزیده‌ی بخش فناوران و مخترعان، برای دستگاه تست تقید و پایداری پروتز زانو؛ همراه با تقدیر دانشگاه صنعتی شریف و اهدای مدال نقره — ۱۴۰۵."),
-      en=("Laureate, 64th Alborz Prize", "One of 12 laureates in the Technologists & Inventors category, for the knee prosthesis constraint and stability test apparatus; also honored by Sharif University of Technology with its silver medal — 2026.")),
+ dict(icon="medal", top=True, fa=("برگزیده‌ی شصت‌وچهارمین جایزه‌ی البرز", "یکی از ۱۲ برگزیده‌ی بخش فناوران و مخترعان، برای دستگاه تست تقید و پایداری پروتز زانو — ۱۴۰۵."),
+      en=("Laureate, 64th Alborz Prize", "One of 12 laureates in the Technologists & Inventors category, for the knee prosthesis constraint and stability test apparatus — 2026.")),
+ dict(icon="medal", fa=("دریافت نشان نقره‌ی ضرب‌شده‌ی دانشگاه صنعتی شریف", "اهدای نشان نقره همراه با لوح تقدیر در جلسه‌ی هیئت‌رئیسه‌ی دانشگاه — ۱۴۰۵."),
+      en=("Recipient of the Silver Medal Minted by Sharif University of Technology", "Presented with a certificate of appreciation at a meeting of the university’s board — 2026.")),
  dict(icon="trophy", top=True, fa=("مقام دوم بیست‌وششمین جشنواره‌ی جوان خوارزمی", "برای طراحی مکانیکی ربات‌های سورتر پستی — ۱۴۰۳."),
       en=("2nd Place, 26th Khwarizmi Youth Award", "For the mechanical design of postal sorting robots — 2025.")),
  dict(icon="trophy", top=True, fa=("مقام دوم بیست‌وچهارمین جشنواره‌ی جوان خوارزمی", "برای دستگاه تست تقید و پایداری پروتز زانو، همراه با گواهی یونسکو و تقدیر رئیس‌جمهور — ۱۴۰۱."),

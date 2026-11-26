@@ -116,7 +116,7 @@ def person_full(L):
                           {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree",
                            "name": "BSc in Mechanical Engineering", "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Iran University of Science and Technology"}}],
         "worksFor": {"@type": "Organization", "name": "Karun HiTech Solutions"},
-        "award": [h["en"][0] for h in HONORS[:6]] + [h["fa"][0] for h in HONORS[:3]],
+        "award": [h["en"][0] for h in HONORS[:7]] + [h["fa"][0] for h in HONORS[:4]],
         "knowsAbout": ["Mechanical design", "Mechatronics", "Industrial robotics", "Mobile robot fleets", "Custom machinery", "Industrial automation",
                        "PLC programming", "Test rigs", "Medical test equipment", "ASTM F1223", "GD&T", "Batch production and quality control",
                        "طراحی مکانیک", "رباتیک صنعتی", "ماشین‌آلات سفارشی", "اتوماسیون صنعتی"],
@@ -351,11 +351,12 @@ def honor_card(h, L):
 def honors_photo(L):
     photo = HONORS_PHOTO[L]
     src = "/assets/alborz-sharif-khwarizmi-awards"
+    small, medium, large = (f"{src}-{width}.webp?v=2" for width in (640, 1280, 1920))
     return f"""<figure class="honors-photo">
-    <img src="{src}-1280.webp" srcset="{src}-640.webp 640w, {src}-1280.webp 1280w, {src}-1920.webp 1920w"
+    <img src="{medium}" srcset="{small} 640w, {medium} 1280w, {large} 1920w"
          sizes="(max-width: 928px) calc(100vw - 50px), 878px" width="1280" height="720"
          alt="{esc(photo['alt'])}" loading="lazy" decoding="async">
-    <figcaption><span>{esc(photo['caption'])}</span><a href="{src}-1920.webp">{esc(photo['enlarge'])}</a></figcaption>
+    <figcaption><span>{esc(photo['caption'])}</span><a href="{large}">{esc(photo['enlarge'])}</a></figcaption>
   </figure>"""
 
 
