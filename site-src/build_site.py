@@ -279,14 +279,28 @@ def footer(L):
 """
 
 
-def page_hero(L, kk, h1, lead="", crumbs=None, meta=None):
+def profile_portrait(L, *, high_priority=False):
+    priority = ' fetchpriority="high"' if high_priority else ""
+    return f"""<div class="portrait">
+      <picture>
+        <source srcset="/hassan-720.webp" type="image/webp">
+        <img src="/hassan-720.jpg" width="720" height="720" alt="{esc(NAME[L])}"{priority}>
+      </picture>
+    </div>"""
+
+
+def page_hero(L, kk, h1, lead="", crumbs=None, meta=None, *, portrait=False):
     c = ""
     if crumbs:
         c = '<div class="crumbs">' + '<span class="sep">/</span>'.join(
             f'<a href="{p}">{n}</a>' if p else f'<span>{n}</span>' for n, p in crumbs) + "</div>"
     m = ('<div class="ph-meta">' + "".join(meta) + "</div>") if meta else ""
-    return f"""<header class="page-hero"><div class="wrap">
-  {c}<div class="kk">{kk}</div><h1>{h1}</h1>{f'<p class="lead">{lead}</p>' if lead else ""}{m}
+    lead_html = f'<p class="lead">{lead}</p>' if lead else ""
+    content = f'{c}<div class="kk">{kk}</div><h1>{h1}</h1>{lead_html}{m}'
+    if portrait:
+        content = f'<div>{content}</div>\n  {profile_portrait(L, high_priority=True)}'
+    return f"""<header class="page-hero"><div class="wrap{' with-portrait' if portrait else ''}">
+  {content}
 </div></header>
 """
 
@@ -403,12 +417,7 @@ def build_home(L):
     </picture>
   </div>
   <div class="wrap profile">
-    <div class="portrait">
-      <picture>
-        <source srcset="/hassan-720.webp" type="image/webp">
-        <img src="/hassan-720.jpg" width="720" height="720" alt="{NAME[L]}">
-      </picture>
-    </div>
+    {profile_portrait(L)}
     <div class="intro">
     <span class="eyebrow">{h["eyebrow"]}</span>
     <h1>{NAME[L]}</h1>
@@ -656,7 +665,8 @@ def build_about(L):
     def chips(cs): return "".join(f'<span class="chip">{esc(c)}</span>' for c in cs)
     skills = "".join(f'<div class="skill-cat"><h3>{t}</h3><div class="chips">{chips(cs)}</div></div>'
                      for t, cs in (s[L] for s in SKILLS))
-    body = page_hero(L, a["kk"], a["h1"], crumbs=[(u["home"], url("index", L)), (a["kk"], None)]) + f"""
+    body = page_hero(L, a["kk"], a["h1"],
+                     crumbs=[(u["home"], url("index", L)), (a["kk"], None)], portrait=True) + f"""
 <section class="block" id="about"><div class="wrap">
   <div class="about">
     <div class="reveal">{"".join(f"<p>{x}</p>" for x in a["paras"])}
