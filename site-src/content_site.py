@@ -255,6 +255,19 @@ FAQ = {
 }
 
 # ---------------------------------------------------------------- افتخارات (top=True روی صفحه‌ی اصلی هم می‌آید)
+HONORS_PHOTO = {
+ "fa": dict(
+  alt="دو تندیس و یک مدال از افتخارات حسن نصیری خونساری",
+  caption="تندیس شصت‌وچهارمین جایزه‌ی البرز، مدال نقره‌ی دانشگاه صنعتی شریف و تندیس بیست‌وچهارمین جشنواره‌ی جوان خوارزمی",
+  enlarge="نمایش عکس در اندازه‌ی بزرگ",
+ ),
+ "en": dict(
+  alt="Two trophies and a medal awarded to Hassan Nasiri Khonsari",
+  caption="64th Alborz Prize trophy, Sharif University of Technology silver medal, and 24th Khwarizmi Youth Award trophy",
+  enlarge="View larger photo",
+ ),
+}
+
 HONORS = [
  dict(icon="medal", top=True, fa=("برگزیده‌ی شصت‌وچهارمین جایزه‌ی البرز", "یکی از ۱۲ برگزیده‌ی بخش فناوران و مخترعان، برای دستگاه تست تقید و پایداری پروتز زانو؛ همراه با تقدیر دانشگاه صنعتی شریف و اهدای مدال نقره — ۱۴۰۵."),
       en=("Laureate, 64th Alborz Prize", "One of 12 laureates in the Technologists & Inventors category, for the knee prosthesis constraint and stability test apparatus; also honored by Sharif University of Technology with its silver medal — 2026.")),

@@ -348,6 +348,17 @@ def honor_card(h, L):
             f'<div><h3>{t}</h3><p>{p}</p></div></div>')
 
 
+def honors_photo(L):
+    photo = HONORS_PHOTO[L]
+    src = "/assets/alborz-sharif-khwarizmi-awards"
+    return f"""<figure class="honors-photo">
+    <img src="{src}-1280.webp" srcset="{src}-640.webp 640w, {src}-1280.webp 1280w, {src}-1920.webp 1920w"
+         sizes="(max-width: 928px) calc(100vw - 50px), 878px" width="1280" height="720"
+         alt="{esc(photo['alt'])}" loading="lazy" decoding="async">
+    <figcaption><span>{esc(photo['caption'])}</span><a href="{src}-1920.webp">{esc(photo['enlarge'])}</a></figcaption>
+  </figure>"""
+
+
 def service_card(s, L, mini=False, link=None):
     t, p = s[L]
     proof = ""
@@ -432,6 +443,7 @@ def build_home(L):
 
 <section class="block honors" id="honors"><div class="wrap">
   {head_block(h["hon_kk"], h["hon_h"])}
+  {honors_photo(L)}
   <div class="h-grid">{hons}</div>
   <div class="center"><a class="more-link" href="{url("about", L)}#honors">{ABOUT[L]["hon_h"]} ←</a></div>
 </div></section>
@@ -653,6 +665,7 @@ def build_about(L):
 </div></section>
 <section class="block honors" id="honors"><div class="wrap">
   {head_block(a["kk"], a["hon_h"])}
+  {honors_photo(L)}
   <div class="h-grid">{hons}</div>
 </div></section>
 <section class="block" id="experience"><div class="wrap">

@@ -74,6 +74,13 @@
 
   /* افتخارات */
   .honors{background:var(--soft);}
+  .honors .head{margin-bottom:28px;}
+  .honors-photo{max-width:880px; margin:0 auto 28px; border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--white);}
+  .honors-photo img{display:block; width:100%; height:auto;}
+  .honors-photo figcaption{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:4px 20px;
+    padding:12px clamp(14px,3vw,24px); color:var(--muted); font-size:14px;}
+  .honors-photo figcaption span{flex:1 1 26rem;}
+  .honors-photo a{color:var(--accent-d); font-weight:700; text-decoration:underline; text-underline-offset:3px;}
   .h-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
   .honor{background:#fff; border-radius:18px; padding:26px; border:1px solid var(--line); transition:.25s;}
   .honor:hover{transform:translateY(-5px); box-shadow:0 22px 48px -22px rgba(26,29,32,0.28); border-color:var(--accent);}
