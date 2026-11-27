@@ -221,7 +221,7 @@ def head(L, title, desc, path, alt_path, nodes, og_img="/og-image.jpg", og_type=
 """
 
 
-def nav(L, active, alt_path):
+def nav(L, active, alt_path, contact_path="#contact"):
     u = UI[L]
     act = ' class="active" aria-current="page"'
     links = "".join(f'<a href="{url(p, L)}"{act if p == active else ""}>{t}</a>' for p, t in u["nav"])
@@ -229,7 +229,7 @@ def nav(L, active, alt_path):
     return f"""<nav><div class="wrap">
   <div class="menu">
     {links}
-    <a href="#contact" class="nav-cta">{u["contact"]}</a>
+    <a href="{contact_path}" class="nav-cta">{u["contact"]}</a>
     <a href="{alt_path}" class="lang-sw" hreflang="{other}" lang="{other}">{u["lang_label"]}</a>
     <a href="tel:{PHONE}" class="nav-phone" aria-label="{u["call"]}">{svg(ICON["phone"], 18)}</a>
   </div>
@@ -403,7 +403,7 @@ def build_home(L):
     nodes = [person_full(L),
              {"@type": "WebSite", "@id": BASE + "/#website", "url": BASE + "/", "name": NAME[L], "inLanguage": ["fa", "en"], "publisher": {"@id": PERSON_ID}},
              {"@type": "ProfilePage", "@id": absu(path) + "#page", "url": absu(path), "name": h["title"], "inLanguage": L,
-              "mainEntity": {"@id": PERSON_ID}, "isPartOf": {"@id": BASE + "/#website"}, "dateModified": TODAY.isoformat()}]
+              "mainEntity": {"@id": PERSON_ID}, "isPartOf": {"@id": BASE + "/#website"}}]
     stats = "".join(f'<div class="stat reveal"><div class="n">{n}</div><div class="l">{l}</div></div>' for n, l in h["stats"])
     svcs = "".join(service_card(s, L, mini=True, link=url("services", L) + "#" + s["id"]) for s in SERVICES)
     hons = "".join(honor_card(x, L) for x in HONORS if x.get("top"))
@@ -648,7 +648,7 @@ def build_about(L):
     path, alt = url("about", L), url("about", "en" if L == "fa" else "fa")
     nodes = [person_full(L), scholarly(),
              {"@type": "ProfilePage", "@id": absu(path) + "#page", "url": absu(path), "name": a["title"], "description": a["desc"], "inLanguage": L,
-              "mainEntity": {"@id": PERSON_ID}, "dateModified": TODAY.isoformat()},
+              "mainEntity": {"@id": PERSON_ID}},
              breadcrumbs(L, [(u["home"], url("index", L)), (a["kk"], path)])]
     facts = "".join(f'<div class="fact"><span class="k">{k}</span><span class="v">{v}</span></div>' for k, v in a["facts"])
     hons = "".join(honor_card(x, L) for x in HONORS)
@@ -734,7 +734,7 @@ def build_extras():
     open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8").write(
         head("fa", "صفحه پیدا نشد | " + NAME["fa"], "این صفحه وجود ندارد.", "/404.html", "/404.html", [person_ref("fa")]).replace(
             '<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">')
-        + nav("fa", None, "/en/") + page_hero("fa", "۴۰۴", "این صفحه پیدا نشد", "Page not found.")
+        + nav("fa", None, "/en/", contact_path="/#contact") + page_hero("fa", "۴۰۴", "این صفحه پیدا نشد", "Page not found.")
         + f'<section class="block"><div class="wrap center"><div class="btns center"><a class="btn btn-gold" href="/">خانه</a>'
           f'<a class="btn btn-gold" href="/projects.html">پروژه‌ها</a><a class="btn btn-gold" href="/en/">English</a></div></div></section>'
         + footer("fa"))
